@@ -258,7 +258,7 @@
                     previewCtx.save();
 
                     // 用每个image创建出来的canvas 不断重复 '填充' 到第一层主画布上
-                    previewCtx.fillStyle = previewCtx.createPattern(canvas, 'no-repeat');
+                    previewCtx.fillStyle = previewCtx.createPattern(canvas, 'repeat');
 
                     // 绘制 '填充' 的矩形
                     previewCtx.fillRect(0, 0, preview.width, preview.height);
@@ -301,8 +301,6 @@
                     ctx = canvas.getContext('2d');
 
                 let img = params._clr && params._clr();
-                    // scale = this.pattern.width * this.pattern.scale / img.width;
-
                 ctx.save();
 
                 /* ------- draw image ------- */
@@ -339,21 +337,23 @@
                 ctx.restore();
             },
             imageAt (x, y) {
+
+                x -= Math.round(this.offset.left);
+                y -= Math.round(this.offset.top);
+
                 var image, bounds, loc, dist,
                     count = this.pattern.images.length,
                     width = Math.round(this.pattern.width * this.pattern.scale),
                     height = Math.round(this.pattern.height * this.pattern.scale),
                     offsetX = Math.floor(x / width),
                     offsetY = Math.floor(y / height),
-                    locations = [[0, 0], [-1, 0], [-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1]];
+                    locations = [[0, 0], [-1, 0], [-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1]];
 
                 x %= width;
                 y %= height;
 
-                // TODO x,y是相对于P0(x,y)的坐标, 应该获取 canvasTwo 的位置
-                x -= Math.round(this.offset.left);
-                y -= Math.round(this.offset.top);
 
+                // TODO x,y是相对于P0(x,y)的坐标, 应该获取 canvasTwo 的位置
                 // 循环条件
                 while (!image && count) {
                     if (!this.colorEq(this.colorAt(x, y, count), this.colorAt(x, y, count - 1))) {
@@ -363,9 +363,11 @@
                 }
 
                 while (image && locations.length) {
+                    // 单个图片的 长宽一半的第三边, 以及中心位置
                     bounds = this.getBounds(image);
                     loc = locations.shift();
                     dist = this.distance(bounds.cx + width * loc[0], bounds.cy + height * loc[1], x, y);
+
                     if (dist < bounds.radius) {
                         return {
                             image: image,
@@ -506,11 +508,10 @@
 
                 this.clear();
 
+                // lmx 鼠标相对于窗口的位置
+                // smx 鼠标按下位置
                 lmx = e.clientX || 0;
                 lmy = e.clientY || 0;
-
-                // console.log(smx); // 鼠标按下位置
-                // console.log(lmx); // 鼠标相对于窗口的位置
 
                 let draggable = {
                     element: e.target,
@@ -576,6 +577,13 @@
                 if (draggable.phase === 'move') {
                     target.image.left = startPos.left + draggable.dx;
                     target.image.top = startPos.top + draggable.dy;
+                }
+
+                if(draggable.phase === 'end'){
+                    // TODO 重置花型在九宫格中的坐标
+                    // TODO fix 花型拖拽出九宫格 无法选中的bug
+                    target.image.left = target.image.left%(this.pattern.width * this.pattern.scale);
+                    target.image.top = target.image.top%(this.pattern.height * this.pattern.scale);
                 }
             },
 
