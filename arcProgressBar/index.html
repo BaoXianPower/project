@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弧形进度条</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 250px;
+            height: 250px;
+            float: left;
+            border: 1px solid #000;
+            overflow: hidden;
+            background-color: #fff;
+            margin: 200px 50px 50px 50px;
+            position: relative;
+        }
+
+        .over {
+            width: 115px;
+            height: 115px;
+            text-align: center;
+            border: 2px solid green;
+            border-radius: 50%;
+            position: absolute;
+            top: 57.5px;
+            left: 63.5px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<div ms-controller="controller">
+
+    <div class="box" ms-repeat="list">
+
+        <svg width="250px" height="250px" transform="rotate(120)" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+            <path class="totalSchedule" fill="none" stroke="#cccccc" stroke-width="8"/>
+            <path ms-attr-id="el.ids" fill="none" stroke="green" stroke-width="8"/>
+
+        </svg>
+
+        <!--<div class="over">-->
+            <!--<span style="font-size: 12px; position: absolute; top: 10px; left: 42px;">已完成</span>-->
+            <!--<span style="font-size: 12px; position: absolute; top: 32px; right: 5px;">m</span>-->
+            <!--<span style="font-size: 30px; font-weight: 700; color: green; line-height: 115px;">1222</span>-->
+        <!--</div>-->
+
+    </div>
+
+</div>
+
+<script src="src/avalon.js"></script>
+<script>
+    var model = [
+        {
+            name: '1',
+            amount: 1
+        },
+        {
+            name: '2',
+            amount: 2
+        },
+        {
+            name: '3',
+            amount: 3
+        }
+    ]
+    var ctr = avalon.define({
+        $id: 'controller',
+        list: [],
+        index: 1,
+
+        init: function () {
+            console.log(122);
+
+            // 获取数据, 并添加需要的参数
+            ctr.listHandler();
+            avalon.scan();
+
+            avalon.each(ctr.list, function (i, it) {
+                ctr.run(it['ids'], 90, 1);
+            });
+        },
+
+        listHandler: function () {
+            console.log(123456);
+
+            // 调接口
+            model.forEach(function (it) {
+                if (it['ids'] == undefined) {
+                    it['ids'] = 'path' + ctr.index;
+                    ctr.index++;
+                }
+                ctr.list.push(it);
+            });
+
+            // 执行所有的总的
+            ctr.run('totalSchedule', 300, 1);
+        },
+
+        run: function (pid, deg, clockwise) {
+            // 获取目标元素
+
+            var path = pid == 'totalSchedule' ?
+                document.getElementsByClassName(pid)[0] : document.getElementById(pid);
+
+            // 初始位置  和半经
+            var x = 200, y = 130, r = 80;
+
+            // 角度处理
+            if (deg > 360) deg -= 360;
+
+            if (deg < 0) deg += 360;
+
+            // 设置属性
+            path.setAttribute("d", ctr.drawArcByRadiusDeg(x, y, r, deg, clockwise));
+
+        },
+
+        // 计算方式
+        drawArcByRadiusDeg: function (startX, startY, r, deg, clockwise) {
+
+            // ????
+            var cw = typeof clockwise !== undefined ? clockwise : 1;
+
+            // 终点坐标计算
+            var x = startX - r + r * Math.cos(deg * Math.PI / 180);
+
+            var y = startY + (1 === cw ? 1 : -1) * r * Math.sin(deg * Math.PI / 180);
+
+            // 大于180度用 大弧度, 小于 180度 用 小弧度
+            var bigOrSmall = deg > 180 ? 1 : 0;
+
+            //path 属性
+            var descriptions = ['M', startX, startY, 'A', r, r, 25, bigOrSmall, cw, x, y];
+
+            return descriptions.join(' ');
+        }
+
+    });
+
+    ctr.init();
+
+    avalon.scan();
+</script>
+
+
+</body>
+
+</html>
