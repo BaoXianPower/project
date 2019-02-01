@@ -1,0 +1,224 @@
+header{
+    width:100%;
+    height:.88rem;
+    color:#fff;
+    font-size:.24rem;
+    text-align:center;
+    background:#f15b3d;
+    position:fixed;
+    z-index: 11;
+}
+.index-header{
+    margin-top:.14rem;
+}
+.add-car{
+    display:block;
+    width:.46rem;
+    height:.46rem;
+    margin:.07rem .4rem 0 .3rem;
+}
+.search-block{
+    width:6rem;
+    height:.6rem;
+    padding:0 .18rem;
+    background:#fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: .3rem;
+}
+.search-block i{
+    display:inline-block;
+    width:.3rem;
+    height:.3rem;
+    background: url("../images/index-icon.png") no-repeat 0 0;
+    background-size:.5rem auto;
+    margin-top:.15rem;
+    float:left;
+}
+.search-block input{
+    margin-left:.15rem;
+    width:5rem;
+    height:.6rem;
+    float:left;
+}
+.swiper-container {
+    width: 100%;
+    height: 2.49rem;
+    overflow: hidden;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:.05rem;}
+.swiper-pagination-bullet{width:.15rem;height:.15rem;background:#fff;opacity: 1;margin:0 .08rem;}
+.swiper-pagination-bullet-active{background:#00a0e9;}
+.swiper-slide img{
+    width:100%;
+    height:2.49rem;
+}
+.tabs{
+    background:#fff;
+    padding:.3rem 0 .3rem .21rem;
+}
+.tabs a{
+    display:block;
+    float:left;
+    background: -webkit-linear-gradient(left, #5ec2f7 , #147edd); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #5ec2f7 , #147edd); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #5ec2f7 , #147edd); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #5ec2f7 , #147edd); /* 标准的语法 */
+    color:#fff;
+    width:1.8rem;
+    height:.6rem;
+    margin:0 .28rem;
+    border-radius:.3rem;
+    font-size:.3rem;
+    line-height:.6rem;
+}
+.tabs i{
+    display:inline-block;
+    background:url("../images/index-icon.png") no-repeat 0 -.31rem;
+    -webkit-background-size: .5rem auto;
+    background-size: .5rem auto;
+    margin:.1rem .12rem 0 .3rem;
+    float:left;
+}
+.tabs .fuel{
+    background: -webkit-linear-gradient(left, #9ee531 , #4ecb1b); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #9ee531 , #4ecb1b); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #9ee531 , #4ecb1b); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #9ee531 , #4ecb1b); /* 标准的语法 */
+}
+.tabs .collage{
+    background: -webkit-linear-gradient(left, #ffc163, #ff8616); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #ffc163, #ff8616); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #ffc163, #ff8616); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ffc163, #ff8616); /* 标准的语法 */
+}
+.market i{
+    width:.44rem;
+    height:.39rem;
+}
+.fuel i{
+    width:.43rem;
+    height:.43rem;
+    background-position: 0 -.71rem;
+    margin-left:.2rem;
+}
+.collage i{
+    width:.43rem;
+    height:.37rem;
+    background-position: 0 -1.16rem;
+    margin-top:.12rem;
+}
+.public-demo{
+    margin-top:.15rem;
+}
+.special-zone-left{
+    position:relative;
+    width:2.5rem;
+}
+.zone-label{
+    display:inline-block;
+    width:1.5rem;
+    height:.46rem;
+    padding-left:.33rem;
+    background-image: linear-gradient(-90deg,
+    #ff5216 0%, #ff8863 100%),
+    linear-gradient(#f5dc8c,#f5dc8c);
+    border-radius:0 .23rem .23rem 0;
+    font-size:.3rem;
+    line-height: .46rem;
+    color:#fff;
+    position:absolute;
+    top:.3rem;
+}
+.special-zone-right{width:5rem;}
+.special-zone-right a{
+    display:block;
+    width:2.49rem;
+    float:left;
+    margin:0 0 .01rem .01rem;
+}
+.e-card{
+    background:#fff;
+    padding:.2rem;
+    font-size:.24rem;
+    color:#333;
+}
+.common-tit{
+    margin-bottom:.22rem;
+    color: #ff5317;
+    font-size:.3rem;
+}
+.common-tit i{
+    display:inline-block;
+    width:.31rem;
+    height:.31rem;
+    background:url("../images/index-icon.png") no-repeat 0 -1.84rem;
+    background-size:.5rem auto;
+    margin-right:.1rem;
+    float:left;
+}
+.e-card ul{
+    height:2.82rem;
+    width:auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.e-card li{
+    width:2rem;
+    display:inline-block;
+}
+.e-card li a{
+    display:block;
+    width:2rem;
+    margin-right:.15rem;
+    text-align:center;
+}
+.e-card li:last-child a{margin-right:0;}
+.e-card-tit{
+    margin:.15rem 0 .1rem;
+}
+.e-card-money{color:#f00;}
+.hot-zone{background:#fff;padding:.2rem;}
+.hot-zone .common-tit i{
+    background-position: 0 -1.53rem;
+}
+.hot-zone-top a,.hot-zone-bot a{
+    display:inline-block;
+    width:3.48rem;
+    margin-right:.12rem;
+    float:left;
+}
+.hot-zone-top a:last-child,.hot-zone-bot a:last-child{margin-right:0;}
+.hot-zone-bot a{
+    width:2.28rem;
+    margin-top:.12rem;
+}
+.ornament-zone-top{
+    position:relative;
+    width:100%;
+}
+.ornament-zone-top .zone-label{
+    background-image: linear-gradient(-90deg,
+    #147edd 0%,
+    #44b4ef 100%),
+    linear-gradient(#f5dc8c,#f5dc8c);
+}
+.ornament-zone li{flex:1;background:#fff;}
+.ornament-zone li a{
+    display:block;
+    width:100%;
+    border-right:1px solid #eee;
+    text-align: center;
+    font-size:.24rem;
+    color:#333;
+    padding:.3rem 0 .15rem;
+}
+.ornament-zone li img{
+    width:1.91rem;
+    height:1.91rem;
+    margin:0 auto;
+}
+.ornament-name{
+    margin:.2rem 0 .1rem;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body>
+<section class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="javascript:;"><img src="../images/index/banner1.jpg" alt=""></a></div>
+        <div class="swiper-slide"><a href="javascript:;"><img src="../images/index/banner2.jpg" alt=""></a></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</section>
+<ul class="index-tabs flex">
+   <li><a href="javascript:;"><img src="../images/index/index_tab1.png" alt="">超市</a></li>
+   <li><a href="javascript:;"><img src="../images/index/index_tab2.png" alt="">团购</a></li>
+   <li><a href="javascript:;"><img src="../images/index/index_tab3.png" alt="">送福利</a></li>
+   <li><a href="javascript:;"><img src="../images/index/index_tab4.png" alt="">礼品卡</a></li>
+   <li><a href="javascript:;"><img src="../images/index/index_tab5.png" alt="">定制专区</a></li>
+   <li><a href="javascript:;"><img src="../images/index/index_tab6.png" alt="">兑换专区</a></li>
+</ul>
+<section class="index-topic">
+    <p class="main-tit">人气推荐<a href="javascript:;">更多 <i></i></a></p>
+    <a href="javascript:;"><img src="../images/index/topic_ban.jpg" alt=""></a>
+</section>
+<ul class="index-goods clearfix">
+    <li>
+        <a href="javascript:;">
+            <img src="../images/index/goods.png" alt="">
+            <p class="index-goods-name">YSL圣罗兰纯口红方管</p>￥320.00
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <img src="../images/index/goods.png" alt="">
+            <p class="index-goods-name">YSL圣罗兰纯口红方管</p>￥320.00
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <img src="../images/index/goods.png" alt="">
+            <p class="index-goods-name">YSL圣罗兰纯口红方管</p>￥320.00
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <img src="../images/index/goods.png" alt="">
+            <p class="index-goods-name">YSL圣罗兰纯口红方管</p>￥320.00
+        </a>
+    </li>
+</ul>
+<footer class="flex">
+    <a href="index.html" class="cur-page"><img src="../images/footer1-red.png" alt="">首页</a>
+    <a href="index.html"><img src="../images/footer2-grey.png" alt="">分类</a>
+    <a href="index.html"><img src="../images/footer3-grey.png" alt="">购物车</a>
+    <a href="index.html"><img src="../images/footer4-grey.png" alt="">我的</a>
+</footer>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/swiper-4.3.3.min.js"></script>
+<script>
+    $(function (){
+        var mySwiper = new Swiper ('.swiper-container', {
+            delay: 3000,
+            autoplay:true,
+            loop: true,
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination'
+            }
+        })
+    });
+
+</script>
+</body>
+</html>

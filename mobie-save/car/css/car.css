@@ -1,0 +1,323 @@
+.car-content{
+    padding-top:.22rem;
+}
+.add-car-top{
+    background:#fff;
+    font-size:.36rem;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
+.add-car-top p{
+    height:1.02rem;
+    margin:0 .22rem;
+    padding:0 .1rem 0 .08rem;
+}
+.add-car-top p:first-child{
+    border-bottom: 1px solid #ddd;}
+.car-types{
+    display:inline-block;
+    width:.71rem;
+    height:.71rem;
+    border-radius: 8px;
+    border: solid 1px #00a0e9;
+    color:#00a0e9;
+    text-align:center;
+    line-height:.71rem;
+    margin:.12rem .5rem 0 0;
+}
+.add-car-top input,.add-car-bottom input{
+    height:1rem;
+    width:4.5rem;
+}
+.select-block{
+    display:block;
+    height:1.02rem;
+    line-height:1.02rem;
+    position:relative;
+}
+.select-block .right-arrow{
+    position:absolute;
+    top:.34rem;
+    right:.1rem;
+}
+.broke-records{
+    height:.7rem;
+    font-size:.3rem;
+    color:#aaa;
+    padding:0 .3rem;
+    line-height: .7rem;
+}
+.broke-records .question-link{
+    position:absolute;
+    margin-top:.18rem;
+    right:.31rem;
+}
+.add-car-bottom{
+    background:#fff;
+    padding:0 .22rem;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
+.add-car-bottom li{
+    height:1.02rem;
+    line-height:1.02rem;
+    font-size:.36rem;
+    border-bottom:1px solid #ddd;
+    padding:0 .09rem;
+    overflow:hidden;
+}
+.add-car-bottom li:last-child{border-bottom:none;}
+.add-car-bottom .question-link{
+    position:relative;
+    top:.32rem;
+}
+.add-car-bottom span{
+    display: inline-block;
+    width:1.45rem;
+    text-align:justify;
+    text-justify:inter-word;
+    margin-right:.5rem;
+    float:left;
+}
+.add-car-bottom span:after{
+    content:'.';
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    height: 0;
+}
+/*车类型列表*/
+.mask{
+    position:fixed;
+    z-index: 11;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:none;
+}
+.car-types-block{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    margin-top:-1px;
+}
+.car-types-block p{
+    height:.43rem;
+    margin-bottom:.2rem;
+}
+.car-types-block a{
+    margin-right:.2rem;
+    width:.43rem;
+    height:.43rem;
+    background:url("../images/icons.png") no-repeat 0 -1.15rem;
+    background-size:1.5rem auto;
+    font-size:.36rem;
+}
+.car-types-list{
+    background:#eee;
+}
+.car-types-list span{
+    display:inline-block;
+    width:.92rem;
+    height:.92rem;
+    text-align:center;
+    line-height:.92rem;
+    font-size:.36rem;
+    float:left;
+    background:#fff;
+    margin:.01rem .01rem .01rem;
+    box-sizing: border-box;
+}
+.car-types-list span:nth-child(8n){
+    margin-right:0;
+    width:.91rem;
+}
+.car-types-list span.selected-type{
+    color:#339cef;
+    border:1px solid #339cef;
+}
+
+/*我的汽车*/
+.car-lists li{
+    width:100%;
+    height:1.51rem;
+    overflow-x: auto;
+    position:relative;
+    padding-bottom:1px;
+}
+.lists-con{
+    width:8.7rem;
+    height:1.5rem;
+    overflow:hidden;
+    position:absolute;
+    left:0;
+    white-space: nowrap;
+    margin-left:.3rem;
+    margin-bottom:-1px;
+    border-bottom:1px solid #eee;
+}
+.lists-con-logo{
+    width:.6rem;
+    height:1.5rem;
+    margin-right:.2rem;
+    text-align:center;
+}
+.lists-con-logo img{
+    display:inline-block;
+    vertical-align: bottom;
+}
+.lists-con-info{
+    margin-top:.4rem;
+    font-size:.3rem;
+    width:5.8rem;
+}
+.lists-con-info p{
+    width:1.5rem;
+    height:.4rem;
+    font-size:.24rem;
+    border:1px solid #aaa;
+    border-radius:.1rem;
+    text-align:center;
+    margin-top:.2rem;
+    line-height:.4rem;
+}
+.lists-con-info p.default{
+    border:none;
+    color:#aaa;
+    text-align:left;
+}
+.lists-con-edit{
+    width:.3rem;
+    height:.34rem;
+    margin:.54rem .3rem 0 0;
+    background:url("../images/icons.png") no-repeat 0 -1.62rem;
+    background-size:1.5rem auto;
+}
+.lists-con-delete{
+    width:1.5rem;
+    line-height:1.5rem;
+    font-size:.36rem;
+    background:#f00;
+    color:#fff;
+    text-align:center;
+    float:left;
+}
+.add-btn{
+    display:block;
+    width: 7.15rem;
+    height: .8rem;
+    font-size:.36rem;
+    color:#fff;
+    line-height:.8rem;
+    text-align: center;
+    background-color: #339cef;
+    border-radius: .15rem;
+    margin:1.18rem auto 0;
+}
+/*汽车类型*/
+.car-types-select{position:relative;}
+.area h4{
+    font-size:.24rem;
+    height:.58rem;
+    line-height:.58rem;
+    padding-left:.3rem;
+}
+.hot-brand-cars{
+    background:#fff;
+}
+.hot-brand-cars p{
+    border-bottom:1px solid #ddd;
+}
+.hot-brand-cars p a{
+    flex:1;
+    text-align:center;
+    padding-bottom:.2rem;
+    font-size:.24rem;
+}
+.hot-brand-cars a img{
+    width:.57rem;
+    margin:.2rem auto;
+}
+.hot-brand-cars p:last-child{border:none;}
+.sort-area li{
+    height:1.01rem;
+    background:#fff;
+    padding-bottom:1px;
+}
+.sort-area li div{
+    padding:.22rem 0;
+    height:.57rem;
+    font-size:.3rem;
+    line-height:.57rem;
+    margin-left:.3rem;
+    margin-bottom:-1px;
+    border-bottom:1px solid #ddd;
+}
+.sort-area li img{
+    width:.57rem;
+    height:.57rem;
+    float:left;
+    margin-right:.3rem;
+}
+.sort-letters{
+    width:.6rem;
+    position:fixed;
+    top:1.7rem;
+    right:0;
+}
+.sort-letters a{
+    display:block;
+    text-align:center;
+    font-size:.24rem;
+    line-height:1.5;
+    color:#777;
+}
+.child-menu{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:7.5rem;
+}
+.child-menu-brand{
+    width:6.32rem;
+    position:absolute;
+    height:100%;
+    padding-top:.89rem;
+    top:0;
+    left:1.18rem;
+    z-index:1;
+    background:#f3f3f3;
+    overflow-y:auto;
+}
+.child-menu-brand .brand{
+    background:#fff;
+    padding:.2rem .3rem;
+    font-size:.3rem;
+    line-height:.57rem;
+}
+.brand img{
+    width:.57rem;
+    height:.57rem;
+    float:left;
+    margin-right:.3rem;
+}
+.brand-child h4{
+    font-weight:normal;
+    height:.45rem;
+    line-height:.45rem;
+    font-size:.24rem;
+    margin-left:.3rem;
+}
+.brand-child ul{
+    background:#fff;
+}
+.brand-child ul li{
+    margin-left:.3rem;
+    border-bottom:1px solid #ddd;
+    height:1rem;
+    font-size:.3rem;
+    line-height:1rem;
+}

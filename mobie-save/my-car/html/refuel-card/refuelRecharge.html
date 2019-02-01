@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <title>加油充值卡</title>
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/zone.css">
+</head>
+<body>
+<header>
+    <a href="javascript:;" class="go-back"><i></i>返回</a>加油充值卡 <a href="javascript:;" class="point">充值记录</a>
+</header>
+<section class="main">
+    <p class="refuel-style flex"><span class="cur-style"><i></i>中国石化</span><span><i></i>中国石油</span></p>
+    <div class="input-block"><span>手机号码</span><input type="number" placeholder="请输入持卡人手机号码" maxlength="11"></div>
+    <div class="input-block"><span>添加加油卡</span><input type="number" placeholder="请输入卡号（以9开头的16位卡号）" maxlength="16">
+    </div>
+    <div class="cards-tab clearfix">
+        <a href="javascript:;" class="red-a"><span>30</span>
+            <p>售价<label>30</label></p></a>
+        <a href="javascript:;"><span>50</span>
+            <p>售价<label>49</label></p></a>
+        <a href="javascript:;"><span>100</span>
+            <p>售价<label>98</label></p></a>
+    </div>
+    <div class="agree-rule"><i></i>已阅读并同意<a href="javascript:;">《充值代缴服务说明》</a></div>
+    <a href="javascript:;" class="confirm">确认充值 <p>(支付<span id="pay">49</span>.00元，省<span id="save">1</span>.00元)</p>
+    </a>
+    <div class="charge-intro">
+        <p>充值说明：</p>
+        <ul>
+            <li><p>1、</p>
+                <p>本服务为全国加油卡代充服务，故不提供充值发票；</p></li>
+            <li><p>2、</p>
+                <p>充值成功后，需要到加油站圈存后方可加油使用；</p></li>
+            <li><p>3、</p>
+                <p>充值时请仔细核对加油卡卡号，避免造成不必要的损失；</p></li>
+            <li><p>4、</p>
+                <p>每日22：45至次日凌晨2：00为中石化官方维护时间，改时间充值将会延迟，所有订单将于中石化维护完成后统一充值。</p></li>
+        </ul>
+    </div>
+
+</section>
+
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../js/public.js"></script>
+<script>
+    // 1像素问题解决
+    if (window.devicePixelRatio && devicePixelRatio >= 2) {
+        $('.cards-tab a').css('border', '.5px solid #aaa');
+    }
+
+    $(function () {
+        $('.refuel-style span').on('click', function () {
+            $(this).addClass('cur-style').siblings().removeClass('cur-style');
+        });
+
+        $('.cards-tab a').on('click', function () {
+            $(this).addClass('red-a').siblings().removeClass('red-a');
+            $('#pay').text($(this).find('span').text());
+            $('#save').text($(this).find('span').text() - $(this).find('label').text());
+        });
+    });
+</script>
+</body>
+</html>

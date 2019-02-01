@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>送礼信息</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/transfer.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/public.js"></script>
+</head>
+<body>
+<header>
+    <a href="javascript:history.go(-1);"></a>送礼信息
+</header>
+<section class="transfer-gift-info main">
+    <div class="top clearfix">
+        <img class="fl" src="../images/gift/t_03.jpg" alt="">
+        <div class="fl">
+            <p class="font-color333 ellisps">祖马龙女士香水花香调蓝风铃30ml</p>
+            <p class="font-color999">全国配送</p>
+            <p class="money-color">￥<span id="price">469.50</span></p>
+        </div>
+        <div class="fr cal sum"><a id="reduce" class="reduce" href="javascript:;">-</a><span class="num" id="num">1</span><a class="plus" id="plus" href="javascript:;">+</a></div>
+    </div>
+    <div class="spacing"></div>
+    <ul class="info">
+        <li class="line"><span id="peo-name"><!--多人群抢-->单人赠送</span></li>
+        <li class="line">
+            <span>赠送人数</span>
+            <div class="fr cal single"><a id="give-reduce" class="reduce" href="javascript:;">-</a><span class="num" id="give-num">1</span><a class="plus" id="give-plus" href="javascript:;">+</a></div>
+        </li>
+        <li>
+            <span>每人可领取数量</span>
+            <div class="fr cal"><a id="peo-reduce" class="reduce" href="javascript:;">-</a><span class="num" id="peo-num">1</span><a class="plus" id="peo-plus" href="javascript:;">+</a></div>
+        </li>
+    </ul>
+    <div class="spacing"></div>
+    <div class="txt">
+        <p class="title">传达心意，写祝福语</p>
+        <textarea name="" id="blessings" cols="30" placeholder="大吉大利"></textarea>
+    </div>
+    <div class="pay">
+        <p class="money">￥<span class="result" id="result">469.50</span></p>
+        <a id="submit" class="transfer-btn">确认支付</a>
+        <p onclick="frame()" class="info font-color666">使用说明>> </p>
+    </div>
+    <!--弹出层-->
+    <section class="pop">
+        <div class="pop-main">
+            <div>24小时内</div>
+            <div>无人领取支付</div>
+            <div>订单金额按原路径</div>
+            <div>返回到购买者账户</div>
+        </div>
+    </section>
+</section>
+<!--消息提示框-->
+<section class="toast"></section>
+<script type="text/javascript">
+    $(function () {
+        $('#submit').on('click',function () {
+            if ($('#blessings').val().length > 50) {
+                toast('祝福语不超过50个字符');
+                return;
+            }
+        });
+
+        //商品单价
+        result($('#reduce'),$('#num'),$('#plus'));
+        //赠送人数
+        result($('#give-reduce'),$('#give-num'),$('#give-plus'));
+        //每人领取数量
+        result($('#peo-reduce'),$('#peo-num'),$('#peo-plus'));
+    });
+    function result($reduce,$num,$plus) {
+        var num = $num.text(),price = parseFloat($('#price').text());
+        if(parseInt(num) === 1) $(reduce).addClass('disabled');
+        $reduce.on('click',function () {
+            num = parseInt($num.text());
+            if(num === 1){
+                $reduce.addClass('disabled');
+                if ($plus.parent().hasClass('single')) {
+                    $('#peo-name').html('单人赠送');
+                }
+            }else{
+                num -= 1;
+                $num.text(num);
+                if(num === 1)  $reduce.addClass('disabled');
+                if ($plus.parent().hasClass('single') && num === 1) {
+                    $('#peo-name').html('单人赠送');
+                }
+            }
+            if ($reduce.parent().hasClass('sum')) {
+                $('#result').text((num*price).toFixed(2));
+            }
+        });
+        $plus.on('click',function () {
+            num = parseInt($num.text());
+            num += 1;
+            if ($plus.parent().hasClass('single') && num > 1) {
+             $('#peo-name').html('多人群抢');
+            }
+            if ($plus.parent().hasClass('sum')) {
+                $('#result').text((num*price).toFixed(2));
+            }
+            if(num > 1) $reduce.removeClass('disabled');
+            $num.text(num);
+        });
+    }
+    function frame() {
+        $('.pop').fadeIn();
+        setTimeout(function (){
+            $('.pop').hide();
+        },2000);
+    }
+</script>
+</body>
+</html>

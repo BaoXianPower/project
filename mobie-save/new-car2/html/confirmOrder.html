@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>确认订单</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/confirm.css">
+</head>
+<body class="grey-body">
+<header class="red-header">
+    <a href="javascript:history.go(-1);" class="go-back"><i></i>返回</a>确认订单
+</header>
+<section class="main">
+    <!--订单地址-->
+    <section class="address">
+        <!--无收货地址-->
+        <!--<a href="javascript:;" class="no-address">-->
+            <!--<i></i>添加收货地址-->
+        <!--</a>-->
+        <!--有收货地址-->
+        <a href="javascript:;">
+            <div class="address-tb fl"></div>
+            <div class="address-info fl">
+                <p>收货人：张珊 <span class="fr">手机号：18827568379</span></p>
+                收货地址：浙江省杭州市滨江区长河街道星光大道二期3楼云贵福地丽珠洞天603室
+            </div>
+            <div class="address-arrow fl"></div>
+        </a>
+        <div class="address-hr"></div>
+    </section>
+    <!--订单列表-->
+    <section class="confirm-list">
+        <ul>
+            <li>
+                <div class="confirm-li-top clearfix">
+                    <div class="li-top-left fl"><img src="../images/confirm1.png" alt=""></div>
+                    <div class="li-top-middle fl">
+                        <p class="top-info-name">冬枣大礼包冬枣大礼包冬枣大礼包</p>
+                        <p class="top-info-params">颜色：地中海蓝   尺寸：500ml</p>
+                        <div class="top-info-price">
+                            ￥<span>600</span>.00 + 2000积分
+                        </div>
+                        <div class="top-info-mail">运费：20元</div>
+                    </div>
+                    <div class="li-top-right fr">x1</div>
+                </div>
+                <div class="confirm-li-bottom">共1件商品&nbsp;&nbsp;小计：￥<span class="li-money">620.00</span> + <span class="li-jf">4000</span>积分</div>
+            </li>
+            <li>
+                <div class="confirm-li-top clearfix">
+                    <div class="li-top-left fl"><img src="../images/confirm1.png" alt=""></div>
+                    <div class="li-top-middle fl">
+                        <p class="top-info-name">冬枣大礼包冬枣大礼包冬枣大礼包</p>
+                        <p class="top-info-params">颜色：地中海蓝   尺寸：500ml</p>
+                        <div class="top-info-price">
+                            ￥<span>600</span>.00 + 2000积分
+                        </div>
+                        <div class="top-info-mail">运费：卖家包邮</div>
+                    </div>
+                    <div class="li-top-right fr">x2</div>
+                </div>
+                <div class="confirm-li-bottom">共2件商品&nbsp;&nbsp;小计：￥<span class="li-money">1200.00</span> + <span class="li-jf">2000</span>积分</div>
+            </li>
+        </ul>
+    </section>
+    <!--订单统计-->
+    <section class="confirm-count">
+        <ul>
+            <li>商品金额<span>￥1200.00</span></li>
+            <li>运费<span>￥20.00</span></li>
+            <li>积分<span>6000</span></li>
+        </ul>
+    </section>
+</section>
+<!--订单实付费用-->
+<section class="confirm-total">
+    实付：<span>￥<b>1820</b>.00 + 6000积分</span><a href="javascript:;" onclick="$('.pay').fadeIn().find('.jf-noEnough').show().next().hide();">提交</a>
+</section>
+
+<!--弹框-->
+<section class="pay">
+    <div class="jf-noEnough pay-main">
+        <div class="no-enough">
+            <p class="pay-main-tit">提示</p>
+            <p class="no-enough-tips">当前账户积分不足，是否提交订单？</p>
+            <div class="no-enough-btns"><a href="javascript:;" onclick="$('.pay').hide();">取消</a><a href="javascript:;" onclick="$(this).parents('.jf-noEnough').hide().next().show();">确定</a></div>
+        </div>
+    </div>
+    <div class="pay-pop">
+        <div><a href="javascript:;" class="close" onclick="$('.pay').fadeOut();"></a></div>
+        <div class="pay-main">
+            <p class="pay-main-tit">支付方式</p>
+            <div class="pay-main-con">
+                <p class="pay-main-money">￥<span>400</span>.00</p>
+                <div class="pay-main-type"><i></i>微信支付 <span class="fr selected-type"></span></div>
+                <div class="pay-main-type">余额支付（0.00元） <span class="fr"></span></div>
+                <a href="javascript:;" class="confirm-btn">确认支付</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ads">
+    <div class="ads-main">
+        <a href="javascript:;" class="close" onclick="$('.ads').hide();"></a>
+        <div><a href="javascript:;"><img src="../images/ads.jpg" alt=""></a></div>
+    </div>
+</section>
+<!--透明提示框-->
+<p class="toast"></p>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/public.js"></script>
+<script>
+    $(function (){
+//        选择支付方式
+       $('.pay-main-type').on('click',function (){
+           $(this).find('span').addClass('selected-type').parents('.pay-main-type').siblings('.pay-main-type').find('span').removeClass('selected-type');
+       });
+
+       $('.confirm-btn').on('click',function (){
+           toast('当前积分不足，无法支付');
+       });
+    });
+</script>
+</body>
+</html>

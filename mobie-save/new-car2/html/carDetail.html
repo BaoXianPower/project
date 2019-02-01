@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <!--<link rel="stylesheet" href="../css/swiper-4.3.3.min.css">-->
+    <link rel="stylesheet" href="../css/goodDetail.css">
+</head>
+<body class="grey-body">
+<header>
+    <a href="javascript:history.go(-1);" class="go-back"><i></i>返回</a>商品详情<a href="javascript:;" class="fr car-tb"><span class="cart"></span><span class="cart-num" id="total">5</span></a>
+</header>
+<section class="main detail-main">
+    <section class="detail-banner"><img src="../images/detail-pic.jpg" alt=""></section>
+    <section class="detail-intro">
+        <p class="detail-intro-price"><span class="now-price">￥<b>320</b>.00</span><span class="original-price">原价￥500</span></p>
+        <p class="detail-intro-name">jo malone祖马龙女士香水花香调蓝风铃30ml</p>
+        <p class="detail-intro-mail">
+            快递：￥20<span>已售：100</span>
+        </p>
+    </section>
+    <section class="detail-params">
+        <a href="javascript:;" onclick="$('.params-select').fadeIn();">选择 <span>请选择颜色 尺寸</span><i class="fr"></i></a>
+    </section>
+    <section class="detail-info">
+        <div class="detail-info-tit">
+            <p class="tit-hr"></p>
+            <p class="tit-word">商品信息</p>
+        </div>
+        <div class="detail-info-con">
+            <img src="../images/detail-info.png" alt="">
+        </div>
+    </section>
+</section>
+<section class="b-fixed">
+    <div class="btn">
+        <a class="cart" id="cart"><span></span>加入购物车</a><a class="sub" onclick="$('.params-select').fadeIn();">犒劳自己</a><a class="sub" href="javascript:;" onclick="$('.params-select').fadeIn();">赠送他人</a>
+    </div>
+</section>
+<section class="params-select">
+    <div class="params-con">
+        <i class="close" onclick="$('.params-select').fadeOut();"></i>
+        <div class="params-con-good clearfix">
+            <img src="../images/detail-pic.jpg" alt="" class="fl">
+            <div class="fl">
+                <p class="params-con-price">￥320 <span>原价￥500</span></p>
+                <p class="params-con-rest">库存<span>215</span>件</p>
+                <p class="params-con-selected">选择 颜色，尺寸</p>
+                <!--<p class="params-con-selected">已选：<span class="param1">地中海蓝</span><span class="param2">50ml</span></p>-->
+            </div>
+        </div>
+        <div class="params-types no-scroll">
+            <div class="params-types-demo good-attr need-select">
+                <p class="types-title">颜色</p>
+                <div class="types-list clearfix"><span>地中海蓝</span><span>茉莉白</span><span>蝙蝠黑</span>
+                </div>
+            </div>
+            <div class="params-types-demo good-attr need-select">
+                <p class="types-title">尺寸</p>
+                <div class="types-list clearfix"><span>30ml</span><span>50ml</span><span>100ml</span>
+                </div>
+            </div>
+            <div class="params-types-demo">
+                <p class="types-title">数量</p>
+                <div class="types-nums"><span class="reduce grey">-</span><span class="num">1</span><span class="add">+</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="toast"></div>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/public.js"></script>
+<!--<script src="../js/swiper-4.3.3.min.js"></script>-->
+<script>
+//    各属性按钮选择事件
+    $('.types-list span').on('click',function (){
+        if(!$(this).hasClass('highlight')){
+            $(this).addClass('highlight').siblings().removeClass('highlight').parents('.good-attr').removeClass('need-select');
+
+        }else{
+            $(this).parent().children('span').removeClass('highlight').parents('.good-attr').addClass('need-select');
+        }
+//        改变选择属性的文字
+        var str='';
+        if($('.params-types .need-select').length > 0){
+            $('.params-con-selected').removeClass('already-selected');
+            str = '选择 '+$('.need-select').eq(0).find('.types-title').text();
+        }else{
+            $('.params-con-selected').addClass('already-selected');
+            str = '已选： ';
+            for(var i=0;i<$('.good-attr').length;i++){
+                str+="<span>" + $('.good-attr').eq(i).find('.highlight').text() + "</span>";
+            }
+        }
+        $('.params-con-selected').html(str);
+    });
+
+//    数量加减法：
+    $('.reduce').on('click',function (){
+        var num = $('.num').text();
+        $('.num').text(--num);
+        $('.add').removeClass('grey');
+        if(num <= 1){
+            $(this).addClass('grey');
+        }else{
+            $(this).removeClass('grey');
+        }
+    });
+    $('.add').on('click',function (){
+        var num = $('.num').text();
+        $('.num').text(++num);
+        $('.reduce').removeClass('grey');
+        if(num >= $('.params-con-rest span').text()){
+            $(this).addClass('grey');
+        }else{
+            $(this).removeClass('grey');
+        }
+    });
+//    加入购物车按钮
+    $('#cart').on('click',function(){
+       if($('.params-select').css('display') == 'block'){
+           if($('.params-con-selected').hasClass('already-selected')){
+               $('.params-select').fadeOut();
+               $('.detail-params a').addClass('finished').html($('.already-selected').html() + '<i class="fr"></i>');
+               var cartNum = $('.cart-num').text();
+               $('.cart-num').text(Number(cartNum) + Number($('.num').text()));
+           }else{
+               toast('请选择商品属性');
+           }
+       }else{
+           if(!$('.detail-params a').hasClass('finished')){
+               $('.params-select').show();
+           }else{
+               toast('已经加入购物车');
+           }
+       }
+    });
+</script>
+</body>
+</html>

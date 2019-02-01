@@ -1,0 +1,661 @@
+/*礼物失效*/
+.gift-failure{
+    padding-top:1.85rem;
+    text-align:center;
+}
+.gift-failure p{font-size:.36rem;}
+.gift-failure-intro{
+    margin:.51rem 0 3.57rem;
+    color:#999;
+    font-size:.22rem;
+}
+.gift-failure-intro span{
+    display:block;
+    margin-top:.15rem;
+    color:#999;
+    font-size:.22rem;
+}
+
+/*支付成功*/
+.pay-success{
+    text-align:center;
+    font-size:.28rem;
+    padding:1.04rem 0 .92rem;
+    background:#fff;
+    margin-bottom:.64rem;
+}
+.pay-success img{
+    width:.94rem;
+    height:.94rem;
+    margin:0 auto;
+}
+.pay-success p{
+    font-size:.48rem;
+    color: #e82e07;
+    margin:.22rem 0 .25rem;
+    font-family: PingFang-SC-Bold;
+}
+.share-tabs{
+    padding:.56rem 0 .4rem;
+    border-bottom:1px solid #ccc;
+}
+.share-tabs img{
+    width:.64rem;
+    height:.64rem;
+    margin:.22rem auto;
+}
+.share-btns{
+    padding:.4rem 0 .34rem;
+    text-align:center;
+}
+.share-btns a{
+    display:inline-block;
+    width:1.2rem;
+    font-size:.26rem;
+}
+.share-btns img{
+    margin:0 auto;
+    margin-bottom:.13rem;
+    width:.52rem;
+}
+
+
+/*赠送成功*/
+.send-success{
+    background:url("../images/transfer/sendSuc.png") no-repeat center;
+    background-size:5.69rem 6.34rem;
+    margin-top:1.59rem;
+    color: #e82e07;
+    font-size:.34rem;
+    padding-top:4.8rem;
+    height:1.54rem;
+    text-align:center;
+    margin-bottom:1.7rem;
+}
+.send-btn{
+    width:100%;
+}
+.send-btn a:last-child{
+    background:transparent;
+    color:#e82e07;
+    border: solid 2px rgba(232, 46, 7, 0.8);
+    margin-top:.63rem;
+    height:.83rem;
+}
+
+/*送礼信息*/
+.gift-message{
+    text-align:center;
+    margin-bottom:1.31rem;
+}
+.gift-message-great{
+    color: #e82e07;
+    font-size:.23rem;
+    padding-top:.63rem;
+    margin-bottom:.35rem;
+}
+.gift-message-great p{
+    font-size:.34rem;
+    margin-bottom:.35rem;
+}
+.gift-message-great p img{
+    display:inline-block;
+    width:.39rem;
+    height:.33rem;
+    margin-right:.18rem;
+}
+.gift-message-good{
+    width:4.54rem;
+    margin:0 auto;
+}
+.gift-goods-name{
+    font-size:.3rem;
+    color:#333;
+    margin:.51rem;
+}
+.transfer-btn-grey{
+    background:#ccc;
+    color:#333;
+}
+
+/*送礼详情*/
+.gift-detail-good{
+    background:#fff;
+    margin-bottom:.39rem;
+}
+.detail-good-top{
+    padding:.25rem  .7rem .25rem .23rem;
+    border-bottom:1px solid #d7d7d7;
+}
+.detail-good-top a{display:block;}
+.detail-good-top img{
+    width:1.68rem;
+    height:1.68rem;
+    margin-right:.2rem;
+}
+.good-top-fr{
+    font-size:.24rem;
+    color:#999;
+}
+.good-top-tit{
+    font-size:.3rem;
+    color:#333;
+    margin-bottom:.16rem;
+    width:4.65rem;
+    height:.3rem;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.good-top-price{
+    text-align:right;
+    color: #e82e07;
+    font-size:.28rem;
+    margin-top:.66rem;
+}
+.detail-good-bot{
+    text-align:right;
+    font-size:.26rem;
+    color:#333;
+    height:.8rem;
+    line-height:.8rem;
+}
+.detail-good-bot .good-nums{margin-right:.67rem;}
+.detail-good-bot .goods-total{color: #e82e07;margin-right:.7rem;}
+.gift-detail-info{
+    background:#fff;
+    margin-bottom:.8rem;
+    padding:.07rem .28rem;
+}
+.gift-detail-info li{
+    font-size:.28rem;
+    line-height:.54rem;
+}
+.gift-detail-info li span{
+    display:inline-block;
+    width:1.45rem;
+    text-align:right;
+}
+.gift-detail-info li label{color: #e82e07;}
+
+/*礼物记录*/
+.gift-records-tabs{
+    height:.57rem;
+    background:#fff;
+    margin-bottom:.17rem;
+    justify-content:space-around;
+}
+.gift-records-tabs a{
+    display:inline-block;
+    width:1.40rem;
+    text-align:center;
+    font-size:.3rem;
+    line-height:.57rem;
+}
+.gift-records-tabs a.highlight{border-bottom:.04rem solid #fb2828;}
+.gift-records li{
+    margin-bottom:.2rem;
+    background:#fff;
+}
+.records-top{
+    padding:0.32rem 0.7rem .16rem .25rem;
+}
+.records-top img{
+    width:1.23rem;
+    height:1.23rem;
+    margin-right:.7rem;
+}
+.records-name{
+    color:#999;
+    font-size:.24rem;
+    margin-bottom:.15rem;
+}
+.records-name p{
+    font-size:.3rem;
+    color:#333;
+    margin-bottom:.16rem;
+    width:4.6rem;
+    height:.3rem;
+    overflow:hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.records-status{
+    font-size:.3rem;
+    text-align:right;
+    line-height: .45rem;
+}
+.records-status .fl{color: #e82e07;font-size:.28rem;}
+.records-status a{
+    display:inline-block;
+    width: 1.63rem;
+    height: .45rem;
+    background-color: #f00;
+    border-radius: .22rem;
+    line-height: .45rem;
+    color:#fff;
+    text-align: center;
+    position:relative;
+    top:-.1rem;
+}
+.gift-records-num{
+    color:#333;
+    font-size:.24rem;
+    line-height:.55rem;
+    text-align:right;
+    margin-right:.7rem;
+    border-top:1px solid #d7d7d7;
+}
+.gift-records-num i{
+    font-style: normal;
+    color: #e82e07;
+    font-size:.28rem;
+}
+.gift-records-num span{
+    margin-right:.67rem;
+}
+
+/*else*/
+.right-arrow{
+    position: absolute;
+    right: .32rem;
+    top: .25rem;
+    width: .20rem;
+    height: .20rem;
+    border-top: .03rem solid #aaa;
+    border-right: .03rem solid #aaa;
+    transform: rotate(45deg)
+}
+.money-color{
+    color: #ed0000
+}
+/*送礼物*/
+.give-gift .top{
+    font-size: .3rem;
+    padding: .68rem 0 .47rem 0;
+    margin-bottom: .44rem;
+    text-align: center;
+}
+.give-gift .top img{
+    width: 4.75rem;
+    height: 3.77rem;
+    display: inline-block;
+}
+.give-gift .top .title{
+    margin: .42rem 0 .15rem 0;
+}
+.order-info-list{
+    font-size: .28rem;
+    padding: .18rem 0;
+}
+.order-info-list li{
+    padding-bottom: .25rem;
+}
+.order-info-list li.last{
+    padding-bottom: 0;
+}
+.order-info-list .title{
+    display: inline-block;
+    width: 1.7rem;
+    text-align: right;
+}
+.order-info-list.logistics .title{
+    color: #999
+}
+.order-info-list.logistics .skip{
+    position: relative;
+}
+.order-info-list.logistics li .title{
+    width: 1.5rem;
+    padding-left: .47rem;
+    text-align: left;
+}
+.order-info-list.logistics .skip .right-arrow{
+    top: 0;
+    right: .85rem;
+    width: .17rem;
+    height: .17rem;
+}
+/*送礼信息*/
+.give-gift-info{
+    font-size: .32rem;
+}
+.interval{
+    padding-top: .19rem;
+}
+.give-gift-info .interval{
+    margin-bottom: .54rem;
+}
+.interval li{
+    height: .94rem;
+    line-height: .94rem;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0 .5rem 0 .2rem;
+    margin-bottom: .19rem;
+    background-color: #fff;
+    display:box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.interval li.ad{
+    position: relative;
+}
+.interval li.ad .right-arrow{
+    right: .35rem;
+    top: .32rem;
+}
+.interval li span:nth-child(2){
+    float: right;
+}
+.interval li label{
+    width:1.7rem;
+    padding-left:.05rem;
+    box-sizing: border-box;
+}
+.interval li input{
+    height:.94rem;
+    line-height:.94rem;
+    font-size:.32rem;
+    border:none;
+    flex:1;
+    background:transparent;
+}
+
+
+/*送礼信息 弹出框*/
+.give-gift-info .pop .pop-main{
+    border: 0;
+    text-align: center;
+}
+.give-gift-info .pop .pop-main p.red{
+    margin: 0 0 .35rem 0;
+    font-size: .4rem;
+}
+.give-gift-info .pop .pop-main-tit{
+    border: 0;
+}
+.give-gift-info .pop .font-color666{
+    margin-bottom: .67rem;
+}
+/*商品详情*/
+/*轮播图*/
+.goods-detail-t .swiper-container {
+    width: 100%;
+    height: 4.27rem;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:0;}
+.swiper-pagination-bullet{width:.2rem;height:.2rem;background:#fff;opacity:.7;}
+.swiper-pagination-bullet-active{background:#f00;}
+
+header.goods{
+    box-shadow: none
+}
+header.goods .cart{
+    position: absolute;
+    top:.2rem;
+    right: .46rem;
+    width: .43rem;
+    height: .48rem;
+    background: url("../images/gift/cart_w.png") no-repeat;
+    background-size: 100%;
+}
+header.goods .cart-num{
+    position: absolute;
+    top:.15rem;
+    right: .38rem;
+    font-size: .16rem;
+    width: .25rem;
+    height: .25rem;
+    line-height: .25rem;
+    text-align: center;
+    color: #ed0000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.goods-detail-t .goods-name{
+    font-size: .34rem;
+    padding: .32rem 0 0 .38rem;
+}
+.goods-detail-t .goods-name .info{
+    font-size: .2rem;
+    color: #adadad;
+}
+.goods-detail-t .goods .title{
+    font-size: .3rem;
+}
+.goods-detail-t .goods-name .money{
+    font-size: .34rem;
+    margin: .3rem 0 .2rem 0;
+}
+/*计算框-+*/
+.cal{
+    color: #4e4e4e;
+    font-size: .25rem;
+    width: 1.46rem;
+    height: .38rem;
+    line-height: .38rem;
+    border-radius: .08rem;
+    -webkit-border-radius: .08rem;
+    border: 1px solid #999;
+    box-sizing: content-box;
+}
+.cal a{
+    display: inline-block;
+    width: .48rem;
+    height: inherit;
+    text-align: center;
+    box-sizing: border-box;
+}
+.cal a.reduce{
+    border-right: 1px solid #999;
+}
+.cal a.plus{
+    border-left: 1px solid #999;
+}
+.cal .num{
+    display: inline-block;
+    width: .48rem;
+    color: #ed0000;
+    text-align: center;
+}
+.cal .disabled{
+    color: #a7a7a7;
+}
+.goods-detail-t .goods-name .fr{
+    margin: .26rem 1.16rem 0 0;
+
+}
+.goods-detail-t .detail{
+    margin-top: .48rem;
+}
+.goods-detail-t .detail .title{
+    font-size: .2rem;
+    text-align: center;
+    margin: .12rem auto .22rem;
+    height: .3rem;
+    line-height: .3rem;
+    box-sizing: border-box;
+}
+.goods-detail-t .title .line {
+    display: inline-block;
+    width: 38%;
+    border-bottom: 1px solid #d7d7d7;
+}
+.goods-detail-t .title .txt {
+    color: #8a8a8a;
+    vertical-align: middle;
+    vertical-align: -25%;
+    margin: 0 .2rem;
+}
+.goods-detail-t .detail .bg{
+    width: 100%;
+    height: 5.4rem;
+    margin-bottom: .98rem;
+}
+.goods-detail-t.poverty-detail .detail .bg{
+    height: 4.9rem;
+}
+
+.goods-detail-t .detail img{
+    width: 100%;
+    height: 100%;
+}
+.b-fixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .98rem;
+}
+.b-fixed .btn{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: .98rem;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+.b-fixed .btn a{
+    float: left;
+    text-align: center;
+    height: 100%;
+}
+.b-fixed .btn .cart{
+    width: 24%;
+    color: #8c8c8c;
+    font-size: .2rem;
+}
+.b-fixed .btn .cart span{
+    display: block;
+    width: .43rem;
+    height: .46rem;
+    margin: .15rem auto .04rem auto;
+    background: url("../images/gift/cart_03.png") no-repeat;
+    background-size: 100%;
+}
+.b-fixed .btn .sub{
+    width: 38%;
+    font-size: .28rem ;
+    color: #fff;
+    line-height: .98rem;
+}
+.poverty-fixed .btn .sub{
+    width: 76%;
+}
+.b-fixed .btn a:nth-child(2){
+    background-color: #e82e07;
+}
+.b-fixed .btn a:nth-child(3){
+    background-color: #fe7211;
+}
+/*转赠详情*/
+.transfer-gift-info{
+    font-size: .24rem;
+}
+.transfer-gift-info .top{
+    padding: .25rem;
+}
+.transfer-gift-info .cal .num{
+    color: #333;
+}
+.transfer-gift-info .top img{
+    width: 1.68rem;
+    height: 1.68rem;
+    margin-right: .25rem
+}
+.transfer-gift-info .top .font-color333{
+    margin-top: .1rem ;
+}
+.transfer-gift-info .top .font-color999{
+    margin: .15rem 0 0 0;
+}
+.transfer-gift-info .top .money-color{
+    font-size: .26rem;
+    margin-top: .73rem;
+}
+.transfer-gift-info .top .cal{
+    margin-top: -.4rem;
+}
+.transfer-gift-info .info li .cal{
+    margin-top: .2rem;
+}
+.transfer-gift-info .info li{
+    height: .8rem;
+    line-height: .8rem;
+    padding: 0 .25rem;
+}
+.transfer-gift-info .info li.line{
+    border-bottom: 1px solid #d7d7d7;
+}
+.spacing{
+    width: 100%;
+    height: .2rem;
+    background-color: #f5f5f5;
+}
+.transfer-gift-info .txt{
+    padding: .25rem;
+}
+.transfer-gift-info .txt .title{
+    font-size: .3rem;
+}
+.transfer-gift-info .txt textarea{
+    width: 100%;
+    height: 1.7rem;
+    margin: .33rem 0 0 0;
+    border-radius: .1rem;
+    padding: .1rem;
+    -webkit-border-radius: .1rem;
+    border: 1px solid #ff4c4c;
+    box-sizing: border-box;
+}
+.transfer-gift-info .pay .money{
+    font-size: .36rem;
+}
+.transfer-gift-info .pay{
+    margin: .8rem 0;
+    text-align: center;
+    overflow: hidden;
+}
+.transfer-gift-info .pay .transfer-btn{
+    font-size: .24rem;
+    margin-top: .3rem;
+    margin-bottom: .12rem;
+    width: 2.26rem;
+    height: .6rem;
+    line-height: .6rem;
+}
+.transfer-gift-info .pay .info{
+    font-size: .18rem;
+}
+.transfer-gift-info .pop-main{
+    color: #fff;
+    width: 4rem;
+    font-size: .34rem;
+    padding: .25rem 0;
+    margin-left: -2rem;
+    text-align: center;
+    background-color: #000;
+}
+.transfer-gift-info .pop-main div{
+    margin-bottom: .15rem;
+}
+.transfer-gift-info .ellisps{
+    width: 4.8rem ;
+}
+.ellisps{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bottom-line .txt {
+    color: #d1d1d1;
+    vertical-align: middle;
+    vertical-align: -25%;
+    margin: 0 .2rem;
+}

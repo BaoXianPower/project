@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>礼物记录</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/transfer.css">
+</head>
+<body class="grey-body">
+<header>
+    <a href="javascript:history.go(-1);"></a>礼物失效
+</header>
+<section class="gift-records-tabs main flex">
+    <a href="javascript:;"  class="highlight">全部</a><a href="javascript:;">我送出的</a><a href="javascript:;">我收到的</a>
+</section>
+<section class="gift-records">
+    <ul>
+        <li>
+            <div class="records-top clearfix">
+                <div class="fl"><img src="../images/transfer/goods.png" alt=""></div>
+                <div class="fr">
+                    <div class="records-name">
+                        <p>祖马龙女士香水花香调蓝风铃30ml</p>全国配送
+                    </div>
+                    <div class="records-status">
+                        <span class="fl">￥469.00</span>待送出
+                    </div>
+                </div>
+            </div>
+            <div class="gift-records-num">
+                <span>共<i>1</i>件商品</span>合计：<i>￥938</i>
+            </div>
+        </li>
+        <li>
+            <div class="records-top clearfix">
+                <div class="fl"><img src="../images/transfer/goods.png" alt=""></div>
+                <div class="fr">
+                    <div class="records-name">
+                        <p>祖马龙女士香水花香调蓝风铃30ml</p>全国配送
+                    </div>
+                    <div class="records-status">
+                        <span class="fl">￥469.00</span><a href="javascript:;" class="records-status-a">送给朋友</a>
+                    </div>
+                </div>
+            </div>
+            <div class="gift-records-num">
+                <span>共<i>1</i>件商品</span>合计：<i>￥938</i>
+            </div>
+        </li>
+        <li>
+            <div class="records-top clearfix">
+                <div class="fl"><img src="../images/transfer/goods.png" alt=""></div>
+                <div class="fr">
+                    <div class="records-name">
+                        <p>祖马龙女士香水花香调蓝风铃30ml</p>全国配送
+                    </div>
+                    <div class="records-status">已发货</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="records-top clearfix">
+                <div class="fl"><img src="../images/transfer/goods.png" alt=""></div>
+                <div class="fr">
+                    <div class="records-name">
+                        <p>祖马龙女士香水花香调蓝风铃30ml</p>全国配送
+                    </div>
+                    <div class="records-status">已转增</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/public.js"></script>
+<script>
+    //礼物列表选择
+    $('.gift-records-tabs').on('click',function (e){
+        var target = $(e.target);
+        if(target.is('a')){
+            target.addClass('highlight').siblings().removeClass('highlight');
+        }
+    });
+</script>
+</body>
+</html>

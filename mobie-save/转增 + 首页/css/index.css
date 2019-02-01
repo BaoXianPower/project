@@ -1,0 +1,95 @@
+body{background:#f2f2f2;padding-bottom:1.3rem;}
+.swiper-container {
+    width: 100%;
+    height: 3.12rem;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:0;}
+.swiper-pagination-bullet{width:.2rem;height:.2rem;background:#fff;opacity:.7;}
+.swiper-pagination-bullet-active{background:#f00;}
+
+.index-tabs{
+    background:#fff;
+    padding:.55rem 0;
+    margin-bottom:.1rem;
+}
+.index-tabs li{float:left;width:16%;}
+.index-tabs li:nth-child(5),.index-tabs li:last-child{flex:1;}
+.index-tabs a{
+    font-size:.24rem;
+    text-align:center;
+    width:100%;
+    display:block;
+}
+.index-tabs a img{
+    width:.57rem;
+    height:.54rem;
+    margin:0 auto .15rem;
+}
+.index-topic{
+    background:#fff;
+    padding:0 .3rem;
+}
+.main-tit{
+    font-size:.3rem;
+    height:.6rem;
+    position:relative;
+    text-align:center;
+    line-height:.6rem;
+}
+.main-tit a{
+    position:absolute;
+    right:0;
+    top:.12rem;
+    font-size:.22rem;
+    display:block;
+    width:.85rem;
+    height:.32rem;
+    line-height:.32rem;
+    border-radius:.3rem;
+    border:1px solid #666;
+}
+.main-tit i{
+    position:absolute;
+    right:.05rem;
+    top:.11rem;
+    width:0;
+    height:0;
+    border-width:.05rem 0 .05rem .11rem;
+    border-style:solid;
+    border-color:transparent transparent         transparent #666;/*透明 透明 透明 灰*/
+}
+.index-topic a{
+    display:block;
+    border-radius:.15rem;
+    overflow:hidden;
+}
+.index-topic a img{width:100%;}
+.index-goods li{
+    width:2.82rem;
+    float:left;
+    margin-bottom:.1rem;
+    padding:0 .3rem .1rem .6rem;
+    background:#fff;
+}
+.index-goods li a{
+    display:block;
+    color: #f25c3e;
+    font-size:.24rem;
+}
+.index-goods li img{margin:0 auto;}
+.index-goods-name{
+    font-size:.24rem;
+    color:#333;
+    margin-bottom:.26rem;
+    width:100%;
+    overflow:hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+.index-goods li:nth-child(2n){
+    margin-right:0;
+    padding:0 .6rem .1rem .3rem;
+    float:right;
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>送礼信息</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/transfer.css">
+</head>
+<body>
+<header>
+    <a href="javascript:history.go(-1);"></a>礼物失效
+</header>
+<section class="gift-message main">
+    <div class="gift-message-great">
+        <p><img src="../images/transfer/heart.png" alt="">恭喜您，收到一份礼物</p>
+        大吉大利
+    </div>
+    <img src="../images/transfer/goods.png" alt="" class="gift-message-good">
+    <p class="gift-goods-name">好想你红枣皇帝御枣去核红枣896g</p>
+</section>
+<section class="send-btn">
+    <a href="javascript:;" class="transfer-btn">领取礼物</a>
+    <!--<a href="javascript:;" class="transfer-btn transfer-btn-grey">礼物已领取</a>-->
+    <a href="javascript:;" class="transfer-btn" onclick="$('.pop').fadeIn();">转增他人</a>
+</section>
+
+<!--弹出层-->
+<section class="pop">
+    <div class="pop-main">
+        <p class="pop-main-tit">分享好友<i class="close" onclick="$('.pop').fadeOut();">&times;</i></p>
+        <div class="share-tabs"><a href="javascript:;"><img src="../images/transfer/wx.png" alt="">微信好友</a></div>
+        <div class="share-btns">
+            <a href="javascript:;"><img src="../images/transfer/link.png" alt="">复制链接</a>
+            <a href="javascript:;"><img src="../images/transfer/refresh.png" alt="">刷新</a>
+            <a href="javascript:;"><img src="../images/transfer/complain.png" alt="">投诉</a>
+        </div>
+    </div>
+</section>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/public.js"></script>
+</body>
+</html>

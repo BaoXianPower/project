@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/transfer.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/swiper-4.3.3.min.js"></script>
+</head>
+<body>
+<header class="goods">
+    <a href="javascript:history.go(-1);"></a>商品详情<span class="cart"></span><span class="cart-num" id="total">5</span>
+</header>
+<section class="goods-detail-t main">
+    <div class="goods">
+        <section class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="javascript:;"><img src="../images/gift/goods_02.png" alt=""></a></div>
+                <div class="swiper-slide"><a href="javascript:;"><img src="../images/gift/goods_b_05.jpg" alt=""></a></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </section>
+        <div class="goods-name">
+            <p class="title font-color333">jo malone祖马龙女士香水花香调蓝风铃30ml</p>
+            <div class="clearfix">
+                <div class="fl">
+                    <div class="money money-color">
+                        ￥<span class="money-color">320.00</span>
+                    </div>
+                    <p class="info">已售<span>18</span>&nbsp;&nbsp;运费<span>20</span> </p>
+                </div>
+                <div class="fr cal"><a id="reduce" class="reduce" href="javascript:;">-</a><span class="num" id="num">1</span><a class="plus" id="plus" href="javascript:;">+</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="detail">
+       <div class="title">
+           <span class="line"></span>
+           <span class="txt">商品详情</span>
+           <span class="line"></span>
+       </div>
+        <div class="bg">
+            <img src="../images/gift/goods_b_05.jpg" alt="">
+        </div>
+    </div>
+</section>
+<section class="b-fixed">
+    <div class="btn">
+        <a class="cart" id="cart"><span></span>加入购物车</a><a class="sub">犒劳自己</a><a class="sub" href="transferDetail.html">赠送他人</a>
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(function () {
+        var val = $('#num').text();
+
+        if(parseInt(val) === 1) $('#reduce').addClass('disabled');
+        $('#reduce').on('click',function () {
+            val = parseInt($('#num').text());
+            if(val === 1){
+                $('#reduce').addClass('disabled');
+                return;
+            }else{
+                val -= 1;
+                $('#num').text(val);
+                if(val === 1)  $('#reduce').addClass('disabled');
+            }
+        });
+        $('#plus').on('click',function () {
+            val = parseInt($('#num').text());
+            val += 1;
+            if(val > 1) $('#reduce').removeClass('disabled');
+            $('#num').text(val);
+        });
+        $('#cart').on('click',function () {
+            var valReal = parseInt($('#num').text()),valNow = parseInt($('#total').text());
+            $('#total').text(valReal+valNow);
+        });
+        /*轮播图*/
+        var mySwiper = new Swiper ('.swiper-container', {
+            delay: 3000,
+            autoplay:true,
+            loop: true,
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination'
+            }
+        })
+    });
+</script>
+</body>
+</html>
