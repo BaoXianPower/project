@@ -1,9 +1,102 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="version" content="alidao v1.0 20140306">
+	<meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+	<meta http-equiv="x-dns-prefetch-control" content="on"/>
+	<title>选择救援类型</title>
+	<link rel="stylesheet" href="../../css/public.css">
+	<link rel="stylesheet" href="../../css/rescue.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:;" class="go-back">
+			<i></i>
+		</a>
+        <span class="font-color-f25c3e">道路救援</span>
+	</header>
+
+    <section class="main">
+
+        <!-- 地图 -->
+        <div class="map" id="baiduMap">
+            百度地图api
+        </div>
+
+        <!-- 救援类型 -->
+        <div>
+
+            <div class="rescue-type">
+                <div class="input-radio rescue-type-one">
+                    <input type="radio" id="a1" name="sex" checked="true">
+                    <label for="a1">非高速路段</label>
+                </div>
+                <div class="input-radio">
+                    <input type="radio" id="a2" name="sex">
+                    <label for="a2">高速路段</label>
+                </div>
+            </div>
+
+            <div class="rescue-sever">
+                <div class="rescue-title">请选择服务项目</div>
+
+                <div class="rescue-btns clearfix" id="rescueType">
+                    <div class="rescue-btn rescue-btn-active">搭电</div>
+                    <div class="rescue-btn">换胎</div>
+                    <div class="rescue-btn">燃油派送</div>
+                    <div class="rescue-btn">拖车</div>
+                    <div class="rescue-btn">困境救援</div>
+                </div>
+
+                <div class="rescue-btns clearfix" id="rescueTypeChildren" style="display: none;">
+                    <!--<div class="rescue-btn">非吊车救援</div>-->
+                    <!--<div class="rescue-btn">吊车救援</div>-->
+                </div>
+            </div>
+
+            <div class="rescue-address">
+                <div class="rescue-title">救援地址</div>
+
+                <div class="rescue-address-input">
+                    <i></i>
+                    <input type="text" value="广州市白云区机场路575号">
+                </div>
+            </div>
+
+            <div class="rescue-next-btn">
+                <span>下一步</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8dYcIroqBPDRhaQGCf3dOl0L09aYsF7N"></script>
+    <script type="text/javascript" src="../../js/baidu-map.js"></script>
+    <script type="text/javascript" src="../../js/rescue.js"></script>
+    <script>
+        $(function () {
+            // 地图初始化
+            createBMap('baiduMap');
+
+            // 选择服务项目
+            $('#rescueType').click(function(e) {
+                selectRescueType(e, this);
+            });
+
+            $('#rescueTypeChildren').click(function(e) {
+                selectRescueType(e, this);
+            });
+
+        });
+    </script>
+</body>
 </html>

@@ -1,9 +1,104 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="version" content="alidao v1.0 20140306">
+	<meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+	<meta http-equiv="x-dns-prefetch-control" content="on"/>
+	<title>联系信息</title>
+	<link rel="stylesheet" href="../../css/public.css">
+	<link rel="stylesheet" href="../../css/rescue.css">
+</head>
+<body>
+    <header>
+        <a href="javascript:;" class="go-back">
+            <i></i>
+        </a>
+        <span class="font-color-f25c3e">道路救援</span>
+    </header>
+
+    <section class="main">
+
+        <!-- 地图 -->
+        <div class="map" id="baiduMap">
+            百度地图api
+        </div>
+
+        <!-- 救援类型 -->
+        <div>
+            <div class="rescue-info">
+                <label for="plateNum">车牌号</label>
+                <input type="text" id="plateNum" placeholder="请输入车牌号">
+            </div>
+
+            <div class="rescue-info">
+                <label for="frameNum">车架号</label>
+                <input type="text" id="frameNum" placeholder="请输入车架号">
+            </div>
+
+            <div class="rescue-info">
+                <label for="contacts">联系人</label>
+                <input type="text" id="contacts" placeholder="请输入联系人姓名">
+            </div>
+
+            <div class="rescue-info">
+                <label for="phoneNum">手机号码</label>
+                <input type="text" id="phoneNum" class="phone" placeholder="请输入手机号">
+                <input type="button" value="获取验证码" id="getVerifyCode">
+            </div>
+
+            <div class="rescue-info">
+                <label for="verCode">验证码</label>
+                <input type="text" id="verCode"  placeholder="请输入验证码">
+            </div>
+
+            <div class="rescue-next-btn">
+                <span class="disabled">申请救援</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="toast"></div>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8dYcIroqBPDRhaQGCf3dOl0L09aYsF7N"></script>
+    <script type="text/javascript" src="../../js/baidu-map.js"></script>
+    <script type="text/javascript" src="../../js/rescue.js"></script>
+    <script>
+        $(function () {
+            // 创建地图
+            createBMap('baiduMap');
+
+            // 获取验证码
+            $('#getVerifyCode').click(function(e) {
+                if (!($('#phoneNum').val())) {
+                    toast('请输入联系人电话')
+                }
+                // 发送短信获取验证码 ...
+            });
+
+            // 验证是否都有值
+            $('.rescue-info > input[type=text]').blur(function(e) {
+                // 验证是否都已经输入完成了
+                checkInputInfo();
+            });
+
+            // 申请救援
+            $('.rescue-next-btn > span').click(function(e) {
+                if (!$(this).hasClass('disabled')) {
+                    // 申请救援 ...
+                    console.log('申请救援成功');
+                }
+            })
+        });
+    </script>
+</body>
 </html>

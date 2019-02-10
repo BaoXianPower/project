@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <title>年审查询</title>
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/annual.css">
+    <link rel="stylesheet" href="../../css/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="../../css/mask-select.css">
+</head>
+<body>
+    <header>
+        <a href="javascript:;" class="go-back">
+            <i></i>
+        </a>
+        <span class="font-color-f25c3e">年审</span>
+        <a href="javascript:;" class="point">年审订单</a>
+    </header>
+
+    <section class="main">
+
+        <!-- 办理免检 -->
+        <div class="annual-six">
+            <div class="annual-six-content">
+                <div class="annual-six-title">六 年 免 检</div>
+                <div class="annual-six-plate">车牌号</div>
+                <div class="annual-six-input">
+                    <input type="text" placeholder="请输入车牌号">
+                </div>
+                <div class="annual-six-input clearfix" id="selectCarType">
+                    <span class="label">车辆类型</span>
+                    <div class="fr">
+                        <span class="place"></span>
+                        <span class="value"></span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="annual-six-input clearfix" id="selectCar">
+                    <span class="label">车辆注册日期</span>
+                    <div class="fr">
+                        <span class="place"></span>
+                        <span class="value"></span>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 办理条件 -->
+        <div class="annual-condition">
+            <div class="condition">
+                <div class="condition-title">
+                    <i></i>
+                    六年免检代办理条件
+                </div>
+                <ul class="condition-content">
+                    <li>1. 使用性质: 非运营</li>
+                    <li>2. 核定载人数: 5人及一下</li>
+                    <li>3. 注册登记时间在2012年1月1日之后的车辆 <span style="color: #666666">(即当前年份减-登记年份 < 6)</span></li>
+                    <li>4. 代办年检车辆无违章</li>
+                    <li>5. 免检期间未发生过致人伤亡事故的车辆</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 办理流程 -->
+        <div class="annual-process">
+            <div class="process">
+                <div class="process-title">
+                    <i></i>
+                    办理流程
+                </div>
+
+                <ul class="process-content">
+                    <li class="process-sign"></li>
+                    <li>
+                        <p class="step">查询代办服务</p>
+                        <p class="explain">填写车牌号、座位数及车辆注册日期</p>
+                    </li>
+                    <li>
+                        <p class="step">上传资料</p>
+                        <p class="explain">填写所需线上代办资料</p>
+                    </li>
+                    <li>
+                        <p class="step">支付订单, 年审代办</p>
+                        <p class="explain">支付成功, 查看年审订单</p>
+                    </li>
+                    <li>
+                        <p class="step">回寄标志</p>
+                        <p class="explain">车主快递收到车检标志</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="annual-next-btn">
+                <span>立即办理</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script src="../../js/swiper-4.3.3.min.js"></script>
+    <script src="../../js/mask-select.js"></script>
+    <script>
+        $(function() {
+
+            // 选择车辆类型
+            new SelectDom('#selectCarType', {
+                value: '',
+                place: '请选择',
+                type: 'currency',
+                currencyList: [
+                    '5座以下非运营车辆',
+                    '5座以上非运营车辆'
+                ]
+            });
+
+            // 选择车辆注册日期
+            new SelectDom('#selectCar', {
+                value: '',
+                place: '车辆注册日期',
+                type: 'time',
+                timeConfig: ['年', '月']
+            });
+        })
+    </script>
+</body>
+</html>

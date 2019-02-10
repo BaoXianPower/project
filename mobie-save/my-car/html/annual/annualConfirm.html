@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <title>年审查询</title>
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/annual.css">
+    <link rel="stylesheet" href="../../css/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="../../css/mask-select.css">
+</head>
+<body>
+    <header>
+        <a href="javascript:;" class="go-back">
+            <i></i>
+        </a>
+        <span class="font-color-f25c3e">订单确认</span>
+    </header>
+
+    <section class="main">
+
+        <div class="annual-step"></div>
+
+        <div class="annual-server">
+            <div class="server">
+                浙A123456年检代办服务
+            </div>
+        </div>
+
+        <div class="annual-identity">
+
+            <div class="identity clearfix">
+
+                <div class="identity-icon fl">
+                    <i></i>
+                </div>
+
+                <div class="identity-info fl">
+                    <div class="name-phone">
+                        <span style="margin-right: .35rem;">张三三</span>
+                        <span>185555555555</span>
+                    </div>
+                    <div class="address">
+                        <p class="address-probably">浙江省杭州市滨江区东冠大厦</p>
+                        <p class="address-details">滨江区东冠大厦111090</p>
+                    </div>
+                </div>
+
+                <i class="arrow-right"></i>
+            </div>
+
+            <div class="inform">因涉及到安全问题, 邮费需要到付</div>
+
+        </div>
+
+        <ul class="annual-car">
+
+            <li class="upload-image clearfix">
+                <div class="fl">
+                    <span>行驶证正面照片</span>
+                    <i></i>
+                </div>
+
+                <div class="fr">
+                    <img src="../../images/annual/test.png" alt="test.png">
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+            <li class="upload-image clearfix">
+                <div class="fl">
+                    <span>行驶证副面照片</span>
+                    <i></i>
+                </div>
+
+                <div class="fr">
+                    <img src="../../images/annual/test.png" alt="test.png">
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+            <li class="upload-image clearfix">
+                <div class="fl">
+                    <span>有效期内交强险副本照片</span>
+                    <i></i>
+                </div>
+
+                <div class="fr">
+                    <span>请上传照片</span>
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+            <li class="select-time clearfix" id="examine">
+                <div class="fl">
+                    <span>检验有效期至</span>
+                </div>
+
+                <div class="fr">
+                    <span class="place"></span>
+                    <span class="value"></span>
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+            <li class="select-time clearfix" id="compulsoryInsurance">
+                <div class="fl">
+                    <span>强制险有效期至</span>
+                </div>
+
+                <div class="fr">
+                    <span class="place"></span>
+                    <span class="value"></span>
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+
+        </ul>
+
+        <div class="annual-money">
+
+            <div class="money clearfix">
+                <div class="fl">
+                    实付: ￥900.00
+                </div>
+                <div class="fr">
+                    立即支付
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script src="../../js/swiper-4.3.3.min.js"></script>
+    <script src="../../js/mask-select.js"></script>
+
+    <script>
+        $(function () {
+            new SelectDom('#examine', {
+                value: '',
+                place: '请选择',
+                type: 'time',
+                timeConfig: ['年', '月', '日']
+            });
+
+            new SelectDom('#compulsoryInsurance', {
+                value: '2016-2-15',
+                place: '请选择',
+                type: 'time',
+                timeConfig: ['年', '月', '日']
+            });
+        })
+    </script>
+</body>
+</html>
