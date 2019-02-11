@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>收费通知单</title>
+  <meta charset="utf-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      font-family: Helvetica, Georgia, Arial, sans-serif, 宋体;
+      color: #555;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+    /*收费通知单呢*/
+    .zrjp-pay-order{
+      width: 70%;
+      max-width: 800px;
+     /* height: 100%;*/
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 20px 40px;
+      
+    }
+    .clearfix:before, .clearfix:after {
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+   }
+    .zrjp-pay-order .pay-order-title {
+      letter-spacing: 10px;
+      color: #333;
+      text-align: center;
+      font-size: 26px;
+      
+    }
+
+    .zrjp-pay-order .pay-order-content p.text {
+      color: #00f;
+      font-size: 14px;
+  
+    }
+
+    .zrjp-pay-order .pay-order-content table {
+      margin-bottom: 20px;
+      border-collapse: collapse;
+      border: 1px solid #ddd;
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .table th {
+      white-space: nowrap;
+      background-color: #f5f5f5;
+      color: #555;
+      background-image: -moz-linear-gradient(top,#ffffff,#f5f5f5);
+      background-image: -ms-linear-gradient(top,#ffffff,#f5f5f5);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FAFAF9), to(#f5f5f5));
+      background-image: -webkit-linear-gradient(top,#ffffff,#f5f5f5);
+      background-image: -o-linear-gradient(top,#ffffff,#f5f5f5);
+      background-image: linear-gradient(top,#ffffff,#f5f5f5);
+      background-repeat: repeat-x;
+    }
+
+    table tr th, table tr td {
+      padding: 4px 5px;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
+      background-color: #F5F5F5;
+    }
+
+    ol {
+      margin-left: 25px;
+      margin-bottom: 10px;
+    }
+
+    ol li {
+      line-height: 24px;
+    }
+
+    .zrjp-pay-order .company-name {
+      float: right;
+      margin-top: 20px;
+      width: 180px;
+      text-align: center;
+    }
+
+    .zrjp-pay-order .tips .text span {
+      text-decoration: underline;
+      margin: 0 8px;
+      color: #00f;
+    }
+    #btn{
+      text-align:center;
+      width:200px;
+      height:30px;
+      margin:50px auto;
+      border-radius:5px;
+      border:none 0;
+    }
+
+    /*弹窗*/
+    .popup{
+      width:260px;
+      background:#fff;
+      position:fixed;
+      top:50%;
+      left:50%;
+      margin-left:-130px;
+      margin-top:-100px;
+      padding:30px;
+      z-index:10;
+      border-radius:5px;
+      display:none;
+    }
+    .popup .send-btn {
+      margin-top:20px;
+    }
+     .popup ul li{
+      margin-top:10px;
+      /*border-bottom:1px solid #ddd;*/
+      list-style:none;
+     }
+     .popup ul li select{
+      width:80px;
+      margin-left:10px;
+      outline:none;
+
+     }
+     .popup ul li  input{
+        width:200px;
+        border:none 0;
+        border-bottom:1px solid #ddd;
+        outline:none;
+        height:20px;
+        padding-left:5px;
+      }
+    .popup .send-btn button{
+        width:100px;
+        height:30px;
+        line-height:30px;
+        text-align:center;
+        border:none 0;
+        border-radius:5px;
+        margin-left:20px;
+
+    }
+    /*透明背景*/
+  .lucency{
+    position:fixed;
+    top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    display:none;
+  }
+  </style>
+</head>
+<body style="background-color: #eee">
+<div class="zrjp-pay-order clearfix">
+  <h3 class="pay-order-title text-center">收费通知单</h3>
+  <div class="pay-order-content">
+    <p class="text">尊敬的用户：<br>您好，贵公司的检测认证项目已经完成；</p>
+    <table class="table table-striped table-bordered table-condensed zrjp-table-text-center">
+      <thead>
+      <tr>
+        <th>序号</th>
+        <th>院内号</th>
+        <th>申请编号</th>
+        <th>报告编号</th>
+        <th>实收费用</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="2">实收合计：</td>
+        <td colspan="3">10000.00</td>
+      </tr>
+      <tr>
+        <td colspan="2">备注：</td>
+        <td colspan="3">这里是备注内容</td>
+      </tr>
+      </tfoot>
+    </table>
+
+    <p class="text">请在10个工作日内，讲以上款项汇至一下账户：</p>
+    <table class="table table-striped table-bordered table-condensed zrjp-table-text-center">
+      <tr>
+        <td>户名：</td>
+        <td>安徽中认倍佳有限公司</td>
+      </tr>
+      <tr>
+        <td>开户银行：</td>
+        <td>中国工商银行滁州城建支行</td>
+      </tr>
+      <tr>
+        <td>账号：</td>
+        <td>1313062809300020288</td>
+      </tr>
+    </table>
+    <div class="tips">
+      <p class="text">注：请在企业付款成功后讲一下信息回复邮件至：<span>test@cctah.com</span>非常感谢！</p>
+      <ol>
+        <li>付款成功后的银行凭证（如网银付款，请截图）；</li>
+        <li>付款人的增值税开票信息（①名称 ②纳税人识别号 ③注册地址、电话 ④开户行及账号）；</li>
+        <li>企业接收邮寄发票报告的地址，联系人姓名，联系人电话；</li>
+      </ol>
+      <p>根据《票据法》的相关规定，发票信息需与汇款信息保持一致，我司对发票开具做如下规定：付款单位名称务必与发票名称一致，特此声明。</p>
+    </div>
+    <div class="company-name">
+      <p>安徽中认倍佳科技有限公司</p>
+      <p class="date">2018-04-15</p>
+      <button id="btn">下一步</button>
+    </div>  
+  </div> 
+</div>
+
+<!-- 弹窗 -->
+ <div class="popup" id="popup">
+    <ul>
+      <li>
+        选择收件人:
+        <select name="" id="">
+          <option value="">张三</option>
+          <option value="">李四</option>
+          <option value="">王某某</option>
+        </select>
+      </li>
+      <li>邮箱: <input type="text"></li>
+      <li>折扣: <input type="text"></li>
+    </ul>   
+    <div class="send-btn">
+      <button>发送</button>
+      <button id="cancel">取消</button>
+    </div>
+ </div>
+  <div class="lucency" id="lucency"></div>
+  <script>
+      var btn = document.getElementById('btn');
+      var popup = document.getElementById('popup');
+      var lucency = document.getElementById('lucency');
+      var cancel = document.getElementById('cancel');
+      btn.onclick= function(){
+          popup.style.display="block";
+          lucency .style.display="block";
+      }
+      cancel.onclick=function(){
+         popup.style.display="none";
+        lucency .style.display="none"
+      }
+
+  </script>
+</body>
+</html>

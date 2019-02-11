@@ -494,6 +494,52 @@ footer a.cur-page i {
     padding-bottom: 0 !important;
 }
 
+/* 大图预览 */
+.mask-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .4);
+    padding: 0 .2rem;
+    display: none;
+}
+
+.mask-image .flex {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.mask-image .flex img {
+    width: 100%;
+}
+
+/* 弹框展示 list */
+.mask-list {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .4);
+    padding: 20% 0;
+    display: none;
+}
+
+.mask-list .mask-list-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.mask-list .peccancy-order-details-list {
+    margin: 0;
+    border-bottom: .02rem solid #E6E6E6;
+}
 
 
 

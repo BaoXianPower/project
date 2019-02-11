@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <ul class="peccancy-order-item">
+        <ul class="peccancy-order-item" id="orderItem">
             <li class="clearfix">
                 <div class="fl">
                     <span class="info">违章代缴信息</span>
@@ -153,8 +153,126 @@
 
     </section>
 
+    <div class="mask-list" id="maskList">
+        <div class="mask-list-content">
+
+            <div class="peccancy-order-details-list">
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+            </div>
+
+            <div class="peccancy-order-details-list">
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+            </div>
+
+            <div class="peccancy-order-details-list">
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+            </div>
+
+            <div class="peccancy-order-details-list">
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+            </div>
+
+            <div class="peccancy-order-details-list">
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+            </div>
+
+            <div class="peccancy-order-details-list">
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+            </div>
+
+            <div class="peccancy-next-btn" id="maskListCancel">
+                <span>取消</span>
+            </div>
+
+        </div>
+    </div>
+
     <script src="../../js/jquery-3.3.1.min.js"></script>
     <script src="../../js/public.js"></script>
+
+    <script>
+        $(function () {
+
+            // 列表弹窗
+            $('#orderItem').on('click', function (e) {
+                $('#maskList').show();
+            });
+
+            $('#maskListCancel').on('click', function (e) {
+                $('#maskList').hide();
+            });
+
+            $(".maskList").on("touchmove", function(event){
+                event.preventDefault();
+            });
+        })
+    </script>
 
 </body>
 </html>

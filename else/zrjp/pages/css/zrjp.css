@@ -1,0 +1,626 @@
+.clearfix {
+    display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/*重置bootstrap默认样式*/
+
+.form-horizontal .control-label {
+    width: 150px;
+}
+
+.form-horizontal .controls {
+    margin-left: 170px;
+}
+
+.zrjp-text-center {
+    text-align: center;
+}
+
+
+/*任务管理开始*/
+
+.zrjp-form-box {
+    margin-bottom: 20px;
+    font-size: 0;
+}
+
+.zrjp-form-box .help-inline {
+    font-size: 14px;
+}
+
+.select2-container .select2-choice>.select2-chosen {
+    font-size: 14px;
+}
+
+.zrjp-form-box:last-child {
+    margin-bottom: 0;
+}
+
+.zrjp-form-box .form-title {
+    margin-top: 0;
+}
+
+.zrjp-form-box .form-title {
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    padding-bottom: 8px;
+    margin: 0 0 30px;
+}
+
+.zrjp-form-half .control-group {
+    width: 50%;
+    float: left;
+}
+
+.zrjp-control-group-100 {
+    width: 100% !important;
+}
+
+.zrjp-form-box .zrjp-control-group-2 {
+    display: inline-block;
+    width: 50%;
+}
+
+.zrjp-form-box .zrjp-control-group-3 {
+    display: inline-block;
+    width: 33.33%;
+}
+
+.zrjp-form-box .zrjp-control-group-4 {
+    display: inline-block;
+    width: 25%;
+}
+
+.zrjp-form-box .user-info .control-group {
+    display: inline-block;
+    width: 22%;
+}
+
+.zrjp-form-box .user-info .operation {
+    display: inline-block;
+    width: 12%;
+    height: 39px;
+    border-bottom: 1px dotted #dddddd;
+    vertical-align: bottom;
+    margin-bottom: 8px;
+}
+
+.zrjp-form-box .user-info .operation .btn {
+    margin: 0 6px;
+    outline: none;
+}
+
+.zrjp-form-box .zrjp-control-group-2 input,
+.zrjp-form-box .zrjp-control-group-3 input,
+.zrjp-form-box .zrjp-control-group-4 input {
+    width: 90%;
+}
+
+
+/*.control-group.zrjp-control-group-half {*/
+
+
+/*display: inline-block;*/
+
+
+/*font-size: 0;*/
+
+
+/*width: 49%;*/
+
+
+/*}*/
+
+.form-horizontal .zrjp-actions {
+    padding: 20px;
+    margin-top: 0;
+}
+
+
+/*任务管理结束*/
+
+
+/*弹出框*/
+
+.zrjp-modal {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 100px auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        margin: 100px auto;
+        width: 960px;
+    }
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    /*border: 1px solid #999;*/
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+
+/*页面弹出层容器*/
+
+.zrjp-layer-modal {
+    display: none;
+    box-sizing: border-box;
+    padding: 20px 15px;
+}
+
+.select2-drop {
+    z-index: 19891015000;
+}
+
+
+/*随机分派任务*/
+
+.form-table {
+    width: 100%;
+}
+
+.form-table .form-row {
+    box-sizing: border-box;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.form-table .form-row .control-group {
+    border: none;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 30px;
+}
+
+.form-table .form-row .control-group .controls {
+    margin-left: 150px;
+}
+
+.form-table .form-row .control-group .select2-container {
+    min-width: 134px;
+}
+
+
+/*新增报告*/
+
+.report-header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.report-header .tips {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border: 1px solid #f00;
+    background: rgb(255, 249, 201);
+    color: #f00;
+    margin-bottom: 10px;
+}
+
+.report-header .warning {
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.report-header .warning span {
+    font-weight: normal;
+    font-size: 22px;
+    color: #f00;
+}
+
+.report-header .add-report {
+    text-align: right;
+    margin: 10px 0 20px;
+}
+
+.report-header .add-report .report-num {
+    border: 1px solid #f60;
+    background-color: #FFF9C9;
+    padding: 6px 10px;
+    margin: 0 8px;
+    border-radius: 5px;
+}
+
+.report-body {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.report-body .report-item {
+    position: relative;
+    margin: 0 -10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.report-body .report-item:last-child {
+    border-bottom: 0;
+}
+
+.report-body .report-item .title {
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    top: 0px;
+    left: -10px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.report-body .report-item .control-group {
+    margin-bottom: 0;
+    padding: 8px 0;
+}
+
+.report-body .report-item .control-group:last-child {
+    border-bottom: 0;
+}
+
+.report-body .report-item .report-info {
+    margin-left: 100px;
+}
+
+.report-body .report-item .add-report {
+    border-bottom: 1px solid #ddd;
+}
+
+.report-body .report-item .add-report:last-child {
+    border-bottom: 0;
+}
+
+.report-body .controls {
+    margin-left: 150px;
+}
+
+.report-footer {
+    margin: 10px auto 20px;
+    text-align: center;
+}
+
+
+/*新增报告*/
+
+.zrjp-table-text-center th,
+.zrjp-table-text-center td {
+    text-align: center;
+}
+
+.zrjp-table-text-center td .file {
+    color: #1E9FFF;
+    margin-right: 4px;
+}
+
+.task-audit .task-audit-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-audit-form {
+    margin-top: 20px;
+}
+
+
+/*定价申请单*/
+
+.request-order-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.request-order .order-num {
+    text-align: right;
+    font-size: 14px;
+}
+
+.request-order .order-num span {
+    font-weight: bold;
+}
+
+.request-order .order-info {
+    margin-top: 10px;
+}
+
+.request-order .order-info>.title {
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.request-order .order-info {
+    width: 100%;
+}
+
+.request-order .order-info .item {
+    float: left;
+    width: 33.333%;
+    position: relative;
+}
+
+.request-order .order-info .item label {
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    text-align: right;
+}
+
+.request-order .order-info .content {
+    margin-left: 80px;
+}
+
+.request-order .order-list {
+    margin-top: 20px;
+}
+
+.zrjp-layer-num-list {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.zrjp-layer-num-list tr td:first-child {
+    width: 60px;
+}
+
+.zrjp-layer-num-list>.btns {
+    margin: 10px 0;
+}
+
+
+/*收费通知单呢*/
+
+.zrjp-pay-order .pay-order-title {
+    letter-spacing: 10px;
+    color: #333;
+}
+
+.zrjp-pay-order .pay-order-content p.text {
+    color: #00f;
+    font-size: 14px;
+}
+
+.zrjp-pay-order .pay-order-content table {
+    margin-bottom: 20px;
+}
+
+.zrjp-pay-order .company-name {
+    float: right;
+    margin-top: 20px;
+    width: 160px;
+    text-align: center;
+}
+
+.zrjp-pay-order .tips .text span {
+    text-decoration: underline;
+    margin: 0 8px;
+}
+
+
+/* 检测流程 */
+
+.zrjp-check-stage .purple-bg {
+    background-color: rgb(219, 219, 255);
+}
+
+.zrjp-check-stage .header {
+    height: 50px;
+    text-align: right;
+}
+
+.zrjp-check-stage .header h5 {
+    margin: 10px 8px;
+    color: black;
+}
+
+.zrjp-check-stage .header a {
+    margin: 5px 8px;
+    font-weight: 700;
+}
+
+.zrjp-check-stage .zrjp-check-text-right td:nth-child(2n-1) {
+    text-align: right;
+    font-weight: bold;
+    color: #000000;
+}
+
+.zrjp-check-stage .zrjp-check-text-right td:nth-child(2n) {
+    font-weight: 500;
+}
+
+.zrjp-check-stage .zrjp-check-text-right .red-font {
+    color: red;
+}
+.zrjp-check-stage .text-center {
+    text-align: center;
+}
+.zrjp-check-stage .text-bold {
+    font-weight: bold;
+}
+.zrjp-check-stage .divide {
+    padding-top: 15px;
+    border-bottom: 1px dotted #dddddd;
+}
+
+/* 流程控制进度查看 */
+.zrjp-check-stage .progress-arrow {
+    width: 80%;
+    height: 70px;
+    margin: 20px auto;
+}
+.zrjp-check-stage .progress-arrow .arrow-item {
+    margin-right: 5px;
+    display: inline-block;
+}
+.zrjp-check-stage .progress-arrow .arrow-item:last-child {
+    margin-right: 0;
+}
+
+.zrjp-check-stage .arrow-item .arrow-item-top {
+    line-height: 12px;
+}
+
+.arrow-item-top .arrow-item-circular {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background: #DEDEB2;
+    background:-moz-linear-gradient(top, #DEDEB2, #B4B4B0);  
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#DEDEB2), to(#B4B4B0));  
+    background:-o-linear-gradient(top, #DEDEB2, #B4B4B0); 
+}
+
+.arrow-item-top .arrow-item-circular .arrow-item-text {
+    position: absolute;
+    top: 17px;
+    left: -28px;
+    width: 70px;
+}
+.arrow-item-text p {
+    margin: 0;
+    line-height: 16px;
+}
+.arrow-item-text .step {
+    color: #9C9CB2;
+}
+.arrow-item-text .step-time {
+    display: none;
+    color: #9C9CB2;
+}
+
+.arrow-item-top .arrow-item-line {
+    height: 6px;
+    width: 100px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background: #DEDEB2;
+    background:-moz-linear-gradient(top, #DEDEB2, #B4B4B0);  
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#DEDEB2), to(#B4B4B0));  
+    background:-o-linear-gradient(top, #DEDEB2, #B4B4B0);
+}
+.arrow-item-top .arrow-item-line .arrow-item-arrow {
+    position: absolute;
+    top: -4px;
+    right: -3px;
+    width: 7px;
+    height: 14px;
+    z-index: 5;
+    background: #DEDEB2;
+    background:-moz-linear-gradient(top, #DEDEB2, #B4B4B0);  
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#DEDEB2), to(#B4B4B0));  
+    background:-o-linear-gradient(top, #DEDEB2, #B4B4B0);
+}
+.arrow-item-arrow .arrow-mask-top {
+    width: 12px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    transform: rotate(40deg);
+    z-index: 10;
+}
+.arrow-item-arrow .arrow-mask-bot {
+    width: 12px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transform: rotate(-40deg);
+    z-index: 10;
+}
+
+/* 流程完成状态 */
+.arrow-item-complete > .arrow-item-top > .arrow-item-circular,
+.arrow-item-complete > .arrow-item-top > .arrow-item-line,
+.arrow-item-complete > .arrow-item-top > .arrow-item-line > .arrow-item-arrow {
+    background-color: #91B400;
+    background: -moz-linear-gradient(top, #BBE061, #91B400);  
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#BBE061), to(#91B400));  
+    background: -o-linear-gradient(top, #BBE061, #91B400); 
+}
+.arrow-item-complete > .arrow-item-top > .arrow-item-circular > .arrow-item-text > .step {
+    color: #000;
+}
+.arrow-item-complete > .arrow-item-top > .arrow-item-circular > .arrow-item-text > .step-time {
+    display: block;
+}
+
+
+/* 流程详情 */
+.zrjp-check-stage .process-info {
+    width: 100%;
+}
+
+.zrjp-check-stage .process-info .fl {
+    float: left;
+}
+
+.process-info .process-info-details {
+    width: 50%;
+    background-color: #DBDBFF;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.process-info-details p {
+    margin: 0;
+    line-height: 28px;
+    color: #000;
+}
+
+.process-info .process-info-details:first-child {
+    border-right: 1px solid #fff;
+}

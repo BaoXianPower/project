@@ -182,25 +182,35 @@ html, body {
 .peccancy-info-pay .select-all {
     flex: 1;
     background-color: #F5F5F5;
-    padding-top: .16rem;
     font-size: .28rem;
 }
 
 .peccancy-info-pay .select-all .input-checkbox {
     width: .8rem;
+    height: 100%;
     text-align: center;
-}
-
-.peccancy-info-pay .select-all span {
-    color: #F25C3E;
     vertical-align: middle;
+    padding-top: .2rem;
 }
 
-.peccancy-info-pay .select-all .explain {
-    padding-top: .16rem;
-    padding-left: .25rem;
+.peccancy-info-pay .select-all .input-checkbox p {
+    font-size: .2rem;
     color: #999999;
-    font-size: .24rem;
+    padding-top: .06rem;
+}
+
+.peccancy-info-pay .select-all .payment {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    line-height: .98rem;
+    color: #F25C3E;
+    font-size: .26rem;
+}
+
+.peccancy-info-pay .select-all .payment .explain {
+    color: #999999;
+    font-size: .22rem;
 }
 
 .peccancy-info-pay .pay-money {
@@ -241,14 +251,14 @@ html, body {
 
 .peccancy-info-already-list i.over {
     display: inline-block;
-    width: 1rem;
-    height: .86rem;
-    background-image: url(../images/peccancy/icon_ycl.png);
+    width: .9rem;
+    height: .9rem;
+    background-image: url(../images/peccancy/ing_ycl@2x.png);
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    top: .63rem;
-    right: .33rem;
+    top: .04rem;
+    right: .1rem;
 }
 
 .peccancy-order-list-none {

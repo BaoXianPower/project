@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>随机任务分派</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="author" content="http://jeesite.com/"/>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=8,IE=9,IE=10"/>
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <script src="http://lmk.javang.cn/zrjp/static/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/css_cerulean/bootstrap.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/awesome/span-awesome.min.css" type="text/css"
+        rel="stylesheet"/>
+  <!--[if lte IE 7]>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/awesome/span-awesome-ie7.min.css" type="text/css"
+        rel="stylesheet"/><![endif]-->
+  <!--[if lte IE 6]>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/bsie/css/bootstrap-ie6.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/bootstrap/bsie/js/bootstrap-ie.min.js"
+          type="text/javascript"></script><![endif]-->
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-select2/3.4/select2.min.css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-select2/3.4/select2.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-validation/1.11.0/jquery.validate.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-validation/1.11.0/jquery.validate.min.js"
+          type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-jbox/2.3/jquery.jBox-2.3.min.js"
+          type="text/javascript"></script>
+
+  <script src="http://lmk.javang.cn/zrjp/static/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+  <script src="http://lmk.javang.cn/zrjp/static/common/mustache.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/common/jeesite.css" type="text/css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/common/jeesite.js" type="text/javascript"></script>
+  <script type="text/javascript">var ctx = '/zrjp/a', ctxStatic = 'http://lmk.javang.cn/zrjp/static';</script>
+  <!-- Baidu tongji analytics -->
+  <script>var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?82116c626a8d504a5c0675073362ef6f";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();</script>
+
+
+  <meta name="decorator" content="default"/>
+  <link rel="stylesheet" href="./css/zrjp.css">
+
+  <script src="layer/layer.js"></script>
+</head>
+<body>
+<button class="btn" type="button" onclick="showModal()">点击显示弹出层</button>
+
+
+<!--弹出层中的内容用  class="zrjp-layer-modal"  包裹-->
+<div class="zrjp-layer-modal">
+  <form id="inputForm" class="form-horizontal" action="#" method="post">
+    <div class="zrjp-form-box">
+      <div class="control-group zrjp-control-group-3">
+        <label class="control-label">开始时间：</label>
+        <div class="controls">
+          <input id="begindate" name="begindate" type="text" readonly="readonly" maxlength="20" class="input-medium Wdate" style="width:180px">
+        </div>
+      </div>
+      <div class="control-group zrjp-control-group-3">
+        <label class="control-label">开始时间：</label>
+        <div class="controls">
+          <input id="begindate" name="begindate" type="text" readonly="readonly" maxlength="20" class="input-medium Wdate" style="width:180px">
+        </div>
+      </div>
+      <div class="control-group zrjp-control-group-3">
+        <label class="control-label">&nbsp;</label>
+        <div class="controls">
+          <input class="btn btn-info" style="width: 100px" type="button" value="增加科室" onclick="cloneFormRow()">
+        </div>
+      </div>
+    </div>
+    <div class="form-table">
+      <div class="form-row">
+        <div class="control-group">
+          <label class="control-label">科室：</label>
+          <div class="controls">
+            <select name="" id="">
+              <option value="1">选项1</option>
+              <option value="2">选项2</option>
+              <option value="3">选项3</option>
+              <option value="4">选项4</option>
+            </select>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">本室工程师：</label>
+          <div class="controls">
+            <select name="" id="">
+              <option value="1">选项5</option>
+              <option value="2">选项6</option>
+              <option value="3">选项7</option>
+              <option value="4">选项8</option>
+            </select>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">样品名称：</label>
+          <input class="input-small" id="" name="" type="text">
+        </div>
+        <div class="control-group">
+          <label class="control-label">商标：</label>
+          <input class="input-small" id="" name="" type="text">
+        </div>
+        <div class="control-group">
+          <label class="control-label">规格型号：</label>
+          <input class="input-small" id="" name="" type="text">
+        </div>
+        <div class="control-group">
+          <label class="control-label">数量/单位：</label>
+          <input class="input-small" id="" name="" type="text">
+        </div>
+        <div class="control-group">
+          <label class="control-label">零部件生产厂家：</label>
+          <input class="input-small" id="" name="" type="text">
+        </div>
+        <div class="control-group">
+          <label class="control-label">检测依据：</label>
+          <input class="input-small" id="" name="" type="text">
+        </div>
+        <div class="control-group">
+          <label class="control-label">报告编号：</label>
+          <input class="input-small" id="" name="" type="text">
+        </div>
+        <div class="control-group">
+          <label class="control-label">备注：</label>
+          <input class="input-small" id="" name="" type="text">
+        </div>
+      </div>
+    </div>
+
+    <div class="zrjp-actions zrjp-text-center">
+      <input class="btn btn-info" type="button" value="保存" onclick="layer.closeAll('page')">
+      <input class="btn btn-success" type="button" value="保存且入库" onclick="layer.closeAll('page')">
+      <input class="btn" type="button" value="取消并返回" onclick="layer.closeAll('page')">
+    </div>
+
+  </form>
+</div>
+
+<script>
+
+  /*显示弹出层*/
+  function showModal() {
+    layer.open({
+      type: 1,
+      title: '随机分派任务',
+      skin: 'layui-layer-rim', //加上边框
+      area: ['80%', '80%'], //宽高
+      content: $('.zrjp-layer-modal'),  //弹出层中的内容
+      cancel: function () {    //解决 select2初始化的下拉框展开的状态下，点右上角的关闭按钮，下拉框无法关闭
+        $('.select2-drop').hide();
+      }
+    });
+  }
+
+  function cloneFormRow () {
+    var formRow = $('.form-table .form-row:eq(0)').clone();
+    var select1 = formRow.find('.controls:eq(0) select').prop('outerHTML');
+    var select2 = formRow.find('.controls:eq(1) select').prop('outerHTML');
+    formRow.find('.controls:eq(0)').html(select1);
+    formRow.find('.controls:eq(0) select').select2();
+    formRow.find('.controls:eq(1)').html(select2);
+    formRow.find('.controls:eq(1) select').select2();
+    formRow.find('input').val('');
+    formRow.find('.del-form-row').show()
+    var delBtn = '<input type="button" class="btn btn-danger del-form-row" value="删除" style="vertical-align: top">'
+
+    formRow.append(delBtn)
+
+    $('.form-table').append(formRow)
+  }
+
+  $(document).on('click','.del-form-row',function () {
+    $(this).parents('.form-row').remove()
+  })
+
+
+</script>
+</body>
+</html>

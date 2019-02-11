@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>新增报告</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="author" content="http://jeesite.com/"/>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=8,IE=9,IE=10"/>
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <script src="http://lmk.javang.cn/zrjp/static/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/css_cerulean/bootstrap.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/awesome/span-awesome.min.css" type="text/css"
+        rel="stylesheet"/>
+  <!--[if lte IE 7]>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/awesome/span-awesome-ie7.min.css" type="text/css"
+        rel="stylesheet"/><![endif]-->
+  <!--[if lte IE 6]>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/bsie/css/bootstrap-ie6.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/bootstrap/bsie/js/bootstrap-ie.min.js"
+          type="text/javascript"></script><![endif]-->
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-select2/3.4/select2.min.css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-select2/3.4/select2.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-validation/1.11.0/jquery.validate.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-validation/1.11.0/jquery.validate.min.js"
+          type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-jbox/2.3/jquery.jBox-2.3.min.js"
+          type="text/javascript"></script>
+
+  <script src="http://lmk.javang.cn/zrjp/static/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+  <script src="http://lmk.javang.cn/zrjp/static/common/mustache.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/common/jeesite.css" type="text/css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/common/jeesite.js" type="text/javascript"></script>
+  <script type="text/javascript">var ctx = '/zrjp/a', ctxStatic = 'http://lmk.javang.cn/zrjp/static'</script>
+  <!-- Baidu tongji analytics -->
+  <script>var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement('script')
+    hm.src = '//hm.baidu.com/hm.js?82116c626a8d504a5c0675073362ef6f'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()</script>
+
+
+  <meta name="decorator" content="default"/>
+  <link rel="stylesheet" href="./css/zrjp.css">
+
+  <script src="layer/layer.js"></script>
+</head>
+<body>
+<button class="btn" type="button" onclick="showModal()">点击显示弹出层</button>
+
+
+<!--弹出层中的内容用  class="zrjp-layer-modal"  包裹-->
+<div class="zrjp-layer-modal">
+  <div class="report-wrapper">
+    <div class="report-header">
+      <div class="tips">
+        <p>报告送审提示: 如果多合一任务，请务必先以【有报告送审】一个任务，剩余其他任务采用【关联报告送审】，如果多合一任务，请务必先以【有报告送审】一个任务，剩余其他任务采用【关联报告送审】，</p>
+      </div>
+      <div class="warning">注意：剩余其他任务采用【关联报告送审】，如果多合一任务，<span>没有签名与盖章</span>一个任务，剩余其他任务采</div>
+      <div class="add-report">
+        <input type="checkbox" id="nb" value="1">
+        <label for="nb">能标中心报告</label>
+        <span class="report-num">共1个待传报告</span>
+        <input type="button" class="btn btn-primary" value="增加其他报告" onclick="addReport()">
+      </div>
+    </div>
+    <div class="report-body">
+      <form class="form-horizontal" action="#">
+        <div class="report-item clearfix">
+          <div class="title">新增报告</div>
+          <div class="report-info add-report">
+            <div class="control-group">
+              <label class="control-label">是否合格：</label>
+              <div class="controls">
+                <input type="radio" name="a">合格
+                <input type="radio" name="a">不合格
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">是否合格：</label>
+              <input type="text" class="input-lage">
+            </div>
+            <div class="control-group">
+              <label class="control-label">上传文件：</label>
+              <input type="file" class="input-lage">
+            </div>
+          </div>
+        </div>
+        <div class="report-item clearfix">
+          <div class="title">样品标签</div>
+          <div class="report-info">
+            <div class="control-group">
+              <label class="control-label">是否合格：</label>
+              <div class="controls">
+                <input type="radio" name="a">合格
+                <input type="radio" name="a">不合格
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="report-item clearfix">
+          <div class="title">审核工程师</div>
+          <div class="report-info">
+            <div class="control-group">
+              <label class="control-label">选择审核工程师：</label>
+              <div class="controls">
+                <select name="">
+                  <option value="1">请选择审核工程师</option>
+                  <option value="2">李四</option>
+                  <option value="3">王二麻子</option>
+                  <option value="4">隔壁老王</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="report-item clearfix">
+          <div class="title">备注</div>
+          <div class="report-info">
+            <div class="control-group">
+              <label class="control-label">备注内容：</label>
+              <textarea name="" id="" cols="60" rows="6" placeholder="请输入备注的内容"></textarea>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="report-footer">
+      <input type="button" class="btn btn-success" value="送审报告">
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  /*显示弹出层*/
+  function showModal () {
+    layer.open({
+      type: 1,
+      title: '随机分派任务',
+      skin: 'layui-layer-rim', //加上边框
+      area: ['70%', '80%'], //宽高
+      content: $('.zrjp-layer-modal'),  //弹出层中的内容
+      cancel: function () {    //解决 select2初始化的下拉框展开的状态下，点右上角的关闭按钮，下拉框无法关闭
+        $('.select2-drop').hide()
+      }
+    })
+  }
+
+  function addReport () {
+
+    var isChecked = !!$('#nb').attr('checked')
+
+    var clone = $('.report-item .add-report:eq(0)').clone()
+
+    clone.find('input').val('')
+    clone.find('input[type=radio]').attr('checked', false)
+
+    var radioName = $('input[type=radio]').attr('name')
+    clone.find('input[type=radio]').attr('name', radioName + 1)
+
+    if (isChecked) {
+      var tips = '<p style="text-align: center;background: #f00;color: #fff;">请上传没有签名和盖章的pdf</p>'
+      clone.append(tips)
+    }
+    $('.report-body .report-item:eq(0)').append(clone)
+    var itemLength = $('.report-item .add-report').length
+    $('.report-header .report-num').text('共' + itemLength + '个待传报告')
+
+    $('#nb').attr('checked', false)
+  }
+
+
+</script>
+</body>
+</html>

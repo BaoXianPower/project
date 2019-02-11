@@ -426,7 +426,7 @@ MaskSelect.prototype.initCurrencyDom = function () {
     this.currencyDom = '<div class="mask-content">\n' +
         '            <div class="complex-select">\n' +
         '                <div class="complex-select-top">\n' +
-        '                    <div class="complex-select-title" id="titleValue">\n' +
+        '                    <div class="" id="titleValue">\n' +
         '                    </div>\n' +
         '                    <div class="complex-select-content flex">\n' +
         (this.contentDom['currencyDom'] || '') +

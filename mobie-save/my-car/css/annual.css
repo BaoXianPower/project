@@ -71,14 +71,18 @@
     vertical-align: middle;
 }
 
+.annual-btn-immediately {
+    background-color: #EDEDED;
+    padding: 0 .5rem !important;
+}
+
 .annual-condition {
-    background: #EDEDED;
+    background-color: #EDEDED;
     padding-bottom: .2rem;
 }
 
 .annual-condition .condition {
-    padding: .2rem 0 .2rem .3rem;
-    background-color: #fff;
+    padding: .2rem 0 .2rem .5rem;
 }
 
 .condition-title {
@@ -100,19 +104,20 @@
 .condition-content {
     margin-top: .25rem;
     font-size: .28rem;
-    color: #333333;
+    color: #9C9C9C;
 }
 
 .condition-content li {
-    margin-bottom: .2rem;
+    margin-bottom: .3rem;
 }
 
 .annual-process {
-    background-color: #fff;
+    background-color: #EDEDED;
+    padding-bottom: .5rem;
 }
 
 .annual-process .process {
-    padding: .2rem 0 0 .3rem;
+    padding: .2rem 0 0 .5rem;
 }
 
 .process-title {
@@ -137,13 +142,13 @@
 }
 
 .process-content li {
-    margin-bottom: .17rem;
-    padding-left: .3rem;
+    margin-bottom: .25rem;
+    padding-left: .5rem;
 }
 
 .process-content li.process-sign {
     width: .2rem;
-    height: 2.9rem;
+    height: 3.1rem;
     margin: 0;
     padding: 0;
     background-image: url(../images/annual/img_lc@2x.png);
@@ -155,13 +160,13 @@
 }
 
 .process-content li .step {
-    font-size: .28rem;
+    font-size: .26rem;
     color: #333333;
-    margin-bottom: .08rem;
+    margin-bottom: .1rem;
 }
 
 .process-content li .explain {
-    font-size: .26rem;
+    font-size: .24rem;
     color: #666666;
 }
 
@@ -278,10 +283,6 @@
     position: relative;
 }
 
-.annual-car li:last-child {
-    border-bottom: none;
-}
-
 .annual-car li .fl span {
     vertical-align: middle;
     color: #666666;
@@ -345,6 +346,10 @@
 }
 
 .annual-money {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #F5F5F5;
     padding-top: .17rem;
 }
@@ -383,6 +388,10 @@ html, body {
     height: calc(100% - .88rem);
     background-color: #F5F5F5;
     overflow: auto;
+}
+
+.main-list-pay {
+    height: calc(100% - 1.86rem);
 }
 
 .contact-info {

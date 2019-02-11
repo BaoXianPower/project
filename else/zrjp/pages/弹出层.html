@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/css_cerulean/bootstrap.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="./css/zrjp.css">
+</head>
+<body>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalDemo">
+  <!--data-target="#modalDemo"  对应Modal中填写的id-->
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="zrjp-modal fade" id="modalDemo" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title zrjp-text-center" id="myModalLabel">这里是标题名称</h4>
+      </div>
+      <div class="modal-body">
+
+        <form class="form-horizontal">
+          <div class="zrjp-form-half">
+            <div class="control-group zrjp-control-group-half">
+              <label class="control-label" for="inputEmail">Email</label>
+              <div class="controls">
+                <input type="text" id="inputEmail" placeholder="Email">
+              </div>
+            </div>
+            <div class="control-group zrjp-control-group-half">
+              <label class="control-label" for="inputPassword">Password</label>
+              <div class="controls">
+                <input type="password" id="inputPassword" placeholder="Password">
+              </div>
+            </div>
+          </div>
+
+          <div class="control-group zrjp-control-group-half">
+            <label class="control-label" for="inputEmail">Email</label>
+            <div class="controls">
+              <input type="text" id="inputEmail" placeholder="Email">
+            </div>
+          </div>
+
+          <div class="control-group zrjp-control-group-half">
+            <label class="control-label" for="inputEmail">Email</label>
+            <div class="controls">
+              <input type="text" id="inputEmail" placeholder="Email">
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+      <div class="modal-footer zrjp-text-center">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <!--data-dismiss="modal" 关闭弹出层-->
+        <button type="button" class="btn btn-primary" id="save">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+  //js关闭弹出层
+  $('#save').click(function () {
+    $('#modalDemo').modal('hide')
+  })
+
+</script>
+
+</body>
+</html>

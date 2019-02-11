@@ -25,7 +25,7 @@
     <section class="main">
         <ul class="peccancy-car">
             <li class="upload-image clearfix">
-                <div class="fl">
+                <div class="fl upload-image-display">
                     <span>行驶证正面照片</span>
                     <i></i>
                 </div>
@@ -37,7 +37,7 @@
                 <i class="arrow-right"></i>
             </li>
             <li class="upload-image clearfix">
-                <div class="fl">
+                <div class="fl upload-image-display">
                     <span>行驶证副面照片</span>
                     <i></i>
                 </div>
@@ -49,7 +49,7 @@
                 <i class="arrow-right"></i>
             </li>
             <li class="upload-image clearfix">
-                <div class="fl">
+                <div class="fl upload-image-display">
                     <span>驾驶证正面照片</span>
                     <i></i>
                 </div>
@@ -61,7 +61,7 @@
                 <i class="arrow-right"></i>
             </li>
             <li class="upload-image clearfix">
-                <div class="fl">
+                <div class="fl upload-image-display">
                     <span>车主身份证正面照片</span>
                     <i></i>
                 </div>
@@ -98,11 +98,35 @@
 
     </section>
 
+    <!-- 大图预览 -->
+    <div class="mask-image" id="maskImage">
+        <div class="flex justify-content">
+            <img src="../../images/test-image.png" alt="">
+        </div>
+    </div>
+
     <script src="../../js/jquery-3.3.1.min.js"></script>
     <script src="../../js/public.js"></script>
 
     <script>
+        $(function () {
+            // 点击预览大图
+            $('.upload-image > .upload-image-display').on('click', function (e) {
+                $('#maskImage').show();
+            });
 
+            // 关闭大图
+            $('#maskImage').on('click', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    return;
+                }
+                $(this).hide();
+            });
+
+            $("#maskImage").on("touchmove", function(event){
+                event.preventDefault();
+            });
+        })
     </script>
 
 </body>

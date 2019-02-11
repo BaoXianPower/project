@@ -24,7 +24,7 @@
         <span class="font-color-f25c3e">订单确认</span>
     </header>
 
-    <section class="main">
+    <section class="main-list main-list-pay">
 
         <div class="annual-step"></div>
 
@@ -63,7 +63,7 @@
         <ul class="annual-car">
 
             <li class="upload-image clearfix">
-                <div class="fl">
+                <div class="fl upload-image-display">
                     <span>行驶证正面照片</span>
                     <i></i>
                 </div>
@@ -75,7 +75,7 @@
                 <i class="arrow-right"></i>
             </li>
             <li class="upload-image clearfix">
-                <div class="fl">
+                <div class="fl upload-image-display">
                     <span>行驶证副面照片</span>
                     <i></i>
                 </div>
@@ -87,7 +87,7 @@
                 <i class="arrow-right"></i>
             </li>
             <li class="upload-image clearfix">
-                <div class="fl">
+                <div class="fl upload-image-display">
                     <span>有效期内交强险副本照片</span>
                     <i></i>
                 </div>
@@ -124,21 +124,28 @@
             </li>
 
         </ul>
+    </section>
 
-        <div class="annual-money">
+    <!-- 支付 -->
+    <div class="annual-money">
 
-            <div class="money clearfix">
-                <div class="fl">
-                    实付: ￥900.00
-                </div>
-                <div class="fr">
-                    立即支付
-                </div>
+        <div class="money clearfix">
+            <div class="fl">
+                实付: ￥900.00
             </div>
-
+            <div class="fr">
+                立即支付
+            </div>
         </div>
 
-    </section>
+    </div>
+
+    <!-- 大图预览 -->
+    <div class="mask-image" id="maskImage">
+        <div class="flex justify-content">
+            <img src="../../images/test-image.png" alt="">
+        </div>
+    </div>
 
     <script src="../../js/jquery-3.3.1.min.js"></script>
     <script src="../../js/public.js"></script>
@@ -147,6 +154,25 @@
 
     <script>
         $(function () {
+
+            // 点击预览大图
+            $('.upload-image > .upload-image-display').on('click', function (e) {
+                $('#maskImage').show();
+            });
+
+            // 关闭大图
+            $('#maskImage').on('click', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    return;
+                }
+                $(this).hide();
+            });
+
+            $("#maskImage").on("touchmove", function(event){
+                event.preventDefault();
+            });
+
+            // 时间选择
             new SelectDom('#examine', {
                 value: '',
                 place: '请选择',
