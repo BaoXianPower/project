@@ -1,0 +1,725 @@
+/* 违章查询 */
+.peccancy-car-image {
+    background-color: #F5F5F5;
+    padding-bottom: .4rem;
+}
+
+.peccancy-car-image img {
+    width: 100%;
+}
+
+.peccancy-car-info {
+    background-color: #fff;
+}
+
+.peccancy-car-info-title {
+    font-size: .32rem;
+    font-weight: bold;
+    color: #333333;
+    padding: .38rem 0 .12rem .3rem;
+}
+
+.peccancy-car-info-title i.car {
+    display: inline-block;
+    width: .46rem;
+    height: .3rem;
+    background-image: url(../images/peccancy/icon_car@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: .1rem;
+}
+
+.peccancy-car-info-title i.arrow-right {
+    display: inline-block;
+    width: .18rem;
+    height: .24rem;
+    background-image: url(../images/peccancy/arrow_right@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: .1rem;
+}
+
+.peccancy-car-info-content {
+    padding-left: .3rem;
+}
+
+.peccancy-car-info-content li {
+    height: 1rem;
+    line-height: 1rem;
+    border-bottom: .02rem solid #DDDDDD;
+    font-size: .32rem;
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.peccancy-car-info-content li label {
+    width: 2.1rem;
+}
+
+.peccancy-car-info-content li input {
+    /*flex-grow: 0;*/
+    /*flex-shrink: 1;*/
+    /*flex-basis: auto;*/
+    flex: 1;
+}
+
+.peccancy-car-query {
+    padding: .65rem;
+    background-color: #F5F5F5;
+}
+
+.peccancy-next-btn {
+    padding: 0 .2rem;
+}
+
+.peccancy-next-btn span {
+    display: inline-block;
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    margin: .3rem 0;
+    font-size: .3rem;
+    color: #fffefe;
+    background-color: #F25C3E;
+    border-radius: .1rem;
+}
+
+/* 违章信息 */
+html, body {
+    height: 100%;
+}
+.main-list {
+    position: fixed;
+    top: .88rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - .88rem);
+    background-color: #F5F5F5;
+    overflow: auto;
+}
+
+.main-list-pay {
+    height: calc(100% - 1.86rem);
+}
+
+.main-list-order {
+    height: calc(100% - 2.42rem);
+}
+
+.peccancy-info-type {
+    height: .82rem;
+    line-height: .82rem;
+    background-color: #fff;
+    color: #666666;
+    font-size: .32rem;
+    padding: 0 .3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.peccancy-info-type .type {
+    padding: 0 .15rem;
+    line-height: .82rem;
+}
+
+.peccancy-info-type .active {
+    border-bottom: .04rem solid #FF6C00;
+    color: #F25C3E;
+}
+
+.peccancy-info-sure-list {
+    background-color: #fff;
+    margin-top: .2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.peccancy-info-sure-list .input-checkbox {
+    width: .8rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    text-align: center;
+}
+
+.peccancy-info-sure-list .content {
+    flex: 1;
+    padding-right: .5rem;
+}
+
+.peccancy-info-content {
+    color: #333333;
+    padding: .24rem 0;
+    font-size: .28rem;
+}
+
+.peccancy-info-content .penalty {
+    color: #FF0000;
+}
+
+.peccancy-info-content .fr {
+    color: #999999;
+}
+
+.peccancy-info-pay {
+    width: 100%;
+    height: .98rem;
+    border-top: .02rem solid #DDDDDD;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+}
+
+.peccancy-info-pay .select-all {
+    flex: 1;
+    background-color: #F5F5F5;
+    font-size: .28rem;
+}
+
+.peccancy-info-pay .select-all .input-checkbox {
+    width: .8rem;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: .2rem;
+}
+
+.peccancy-info-pay .select-all .input-checkbox p {
+    font-size: .2rem;
+    color: #999999;
+    padding-top: .06rem;
+}
+
+.peccancy-info-pay .select-all .payment {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    line-height: .98rem;
+    color: #F25C3E;
+    font-size: .26rem;
+}
+
+.peccancy-info-pay .select-all .payment .explain {
+    color: #999999;
+    font-size: .22rem;
+}
+
+.peccancy-info-pay .pay-money {
+    flex: 1;
+    background-color: #F25C3E;
+    color: #ffffff;
+    font-size: .3rem;
+    text-align: center;
+    line-height: .98rem;
+}
+
+.peccancy-info-not-list {
+    padding-left: .3rem;
+    padding-right: .5rem;
+    margin-top: .2rem;
+    background-color: #fff;
+}
+
+.peccancy-info-already-list {
+    padding-left: .3rem;
+    padding-right: .5rem;
+    margin-top: .2rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.peccancy-info-already-list i.conduct {
+    display: inline-block;
+    width: 1.35rem;
+    height: .5rem;
+    background-image: url(../images/peccancy/icon_cl@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.peccancy-info-already-list i.over {
+    display: inline-block;
+    width: .9rem;
+    height: .9rem;
+    background-image: url(../images/peccancy/ing_ycl@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: .04rem;
+    right: .1rem;
+}
+
+.peccancy-order-list-none {
+    padding-top: 2.68rem;
+    text-align: center;
+}
+
+.peccancy-order-list-none i {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../images/peccancy/icon_wwz@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.peccancy-order-list-none p {
+    font-size: .3rem;
+    color: #999999;
+    margin-top: .25rem;
+}
+
+/* 填写代办信息 */
+.peccancy-car {
+
+}
+
+.peccancy-car li {
+    font-size: .24rem;
+    padding: 0 .7rem 0 .45rem;
+    border-bottom: .02rem solid #DDDDDD;
+    position: relative;
+}
+
+.peccancy-car li .fl span {
+    vertical-align: middle;
+    color: #666666;
+}
+
+.peccancy-car li .fr span {
+    vertical-align: middle;
+    color: #999999;
+}
+
+.peccancy-car li i.arrow-right {
+    display: inline-block;
+    width: .18rem;
+    height: .24rem;
+    background: url("../images/peccancy/arrow_right@2x.png") no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    right: .35rem;
+    top: .6rem;
+}
+
+.peccancy-car li.upload-image .fl,
+.peccancy-car li.upload-image .fr {
+    height: 1.4rem;
+    line-height: 1.4rem;
+}
+
+.peccancy-car li.upload-image .fl i {
+    display: inline-block;
+    width: .26rem;
+    height: .26rem;
+    background-image: url(../images/annual/icon_note@2x.png);
+    background-size: contain;
+    margin-left: .1rem;
+    vertical-align: middle;
+}
+
+.peccancy-car li.upload-image .fr img {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+}
+
+.peccancy-car li.input-info {
+    height: .8rem;
+    line-height: .8rem;
+    color: #666666;
+    display: flex;
+}
+
+.peccancy-car li.input-info label {
+    width: 2.55rem;
+}
+
+.peccancy-car li.input-info input {
+    flex: 1;
+}
+
+.peccancy-car-handle {
+    background-color: #F5F5F5;
+}
+
+/* 订单确认 */
+.peccancy-order-item {
+    background-color: #fff;
+}
+
+.peccancy-order-item li {
+    padding-left: .3rem;
+    padding-right: .6rem;
+    border-bottom: .02rem solid #DDDDDD;
+    position: relative;
+}
+
+.peccancy-order-item li .fl,
+.peccancy-order-item li .fr {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .3rem;
+    color: #666666;
+}
+
+.peccancy-order-item li i.arrow-right {
+    display: inline-block;
+    width: .18rem;
+    height: .24rem;
+    background: url("../images/peccancy/arrow_right@2x.png") no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    right: .35rem;
+    top: .4rem;
+}
+
+.peccancy-order-item li .fl .title {
+    font-size: .32rem;
+    color: #F25C3E;
+}
+
+.peccancy-order-item li .fl .info {
+    font-size: .32rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.peccancy-order-item li .fr .count {
+    color: #999999;
+    font-size: .26rem;
+}
+
+.peccancy-order-item li .fr .money {
+    color: #F25C3E;
+}
+
+.peccancy-order-pay {
+    background-color: #F5F5F5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.peccancy-order-pay p {
+    height: .56rem;
+    text-align: center;
+    font-size: .24rem;
+    color: #CCCCCC;
+}
+
+.peccancy-order-pay .pay {
+    height: .98rem;
+    border-top: .02rem solid #DDDDDD;
+    display: flex;
+}
+
+.peccancy-order-pay .pay .money {
+    flex: 1;
+    line-height: .98rem;
+    text-align: center;
+    background-color: #F5F5F5;
+    color: #666666;
+    font-size: .24rem;
+}
+
+.peccancy-order-pay .pay .money .num {
+    color: #F25C3E;
+    font-size: .32rem;
+}
+
+.peccancy-order-pay .pay .money .explain {
+    color: #999999;
+}
+
+.peccancy-order-pay .pay .payment {
+    flex: 1;
+    line-height: .98rem;
+    text-align: center;
+    background-color: #F25C3E;
+    color: #ffffff;
+    font-size: .26rem;
+}
+
+/* 支付成功 */
+.peccancy-apy-success {
+    text-align: center;
+    padding-top: 1.7rem;
+    padding-bottom: .8rem;
+}
+
+.peccancy-apy-success i {
+    display: inline-block;
+    width: 1.22rem;
+    height: 1.22rem;
+    background-image: url(../images/rescue/ok@2x.png);
+    background-size: cover;
+}
+
+.peccancy-apy-success p {
+    font-size: .3rem;
+    color: #555555;
+    margin-top: .4rem;
+}
+
+.peccancy-next-btn-details span {
+    background-color: #F5F5F5;
+    color: #F25C3E;
+    border: .02rem solid #F25C3E;
+}
+
+/* 我的订单 */
+.peccancy-order-list {
+    background-color: #fff;
+    padding-top: .32rem;
+    margin-bottom: .2rem;
+}
+
+.peccancy-order-list > div {
+    padding-left: .3rem;
+    padding-right: .22rem;
+}
+
+.order-list-number {
+    font-size: .24rem;
+    margin-bottom: .26rem;
+}
+
+.order-list-number .fl {
+    color: #727272;
+}
+
+.order-list-number .fr {
+    color: #FA1D1D;
+    font-weight: bold;
+}
+
+.order-list-number .fr.success {
+    color: #06C257;
+}
+
+.order-list-plate {
+    font-size: .28rem;
+    color: #727272;
+    margin-bottom: .26rem;
+}
+
+.order-list-plate .content {
+    color: #333333;
+}
+
+.order-list-plate .fr {
+    color: #333333;
+}
+
+.order-list-operation {
+    border-top: .02rem solid #EEEEEE;
+    font-size: .26rem;
+}
+
+.order-list-operation .fr {
+    height: .92rem;
+    line-height: .92rem;
+    font-size: .24rem;
+    font-weight: bold;
+    color: #F25C3E;
+}
+
+/* 办理失败 */
+.peccancy-status {
+    background-color: #fff;
+    border-bottom: .02rem solid #EEEEEE;
+}
+
+.peccancy-status .fl {
+    height: 1.84rem;
+    padding-left: 1.07rem;
+}
+
+.peccancy-status .fl .status {
+    font-size: .46rem;
+    color: #FF6142;
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+}
+
+.peccancy-status .fl .time {
+    font-size: .24rem;
+    color: #999999;
+}
+
+.peccancy-status .fr {
+    padding-top: .3rem;
+    padding-right: .85rem;
+}
+
+.peccancy-status .fr i {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.35rem;
+    background-image: url(../images/peccancy/icon_sb@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.identity i.arrow-right {
+    display: inline-block;
+    width: .24rem;
+    height: .32rem;
+    background: url("../images/annual/arrow_right.png") no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    right: .35rem;
+    top: .7rem;
+}
+
+.identity-icon {
+    width: 26%;
+    height: 100%;
+    line-height: 1.7rem;
+    padding-left: .85rem;
+}
+
+.identity-icon i {
+    display: inline-block;
+    width: .52rem;
+    height: .64rem;
+    background-image: url(../images/annual/address.png);
+    background-size: contain;
+}
+
+.identity-info {
+    width: 74%;
+    height: 100%;
+    padding-right: .85rem;
+    padding-top: .35rem;
+    font-size: .28rem;
+    color: #333333;
+}
+
+.identity-info .name-phone {
+    margin-bottom: .22rem;
+}
+
+.identity-info .address .address-probably {
+    margin-bottom: .05rem;
+}
+
+.order-details {
+    background: #ffffff;
+    border-bottom: .02rem solid #EEEEEE;
+}
+
+.order-details .identity-icon {
+    padding-left: .58rem;
+    width: 22%;
+}
+
+.order-details .identity-info {
+    width: 77%;
+}
+
+.peccancy-project {
+    background-color: #fff;
+    padding: .2rem .3rem;
+    font-size: .3rem;
+    color: #F74A0B;
+}
+
+.peccancy-project .fr .count {
+    color: #333333;
+}
+
+.peccancy-project .fr .money {
+    color: #F15B3D;
+}
+
+.peccancy-project .fr .title {
+    color: #333333;
+    margin-right: .25rem;
+}
+
+.peccancy-project-money {
+    border-top: .02rem solid #EEEEEE;
+    margin-bottom: .2rem;
+}
+
+.peccancy-order-details-list {
+    padding-left: .3rem;
+    padding-right: .5rem;
+    margin-bottom: .2rem;
+    background-color: #fff;
+}
+
+.peccancy-server-info {
+    background-color: #fff;
+    padding-top: .3rem;
+    padding-left: .3rem;
+}
+
+.peccancy-server-info li {
+    font-size: .28rem;
+    color: #333333;
+    margin-bottom: .2rem;
+}
+
+.peccancy-server-info li.title {
+    margin-bottom: .3rem;
+    font-size: .3rem;
+    color: #666666;
+}
+
+.peccancy-server-info li.title span {
+    display: inline-block;
+    width: .08rem;
+    height: .3rem;
+    background-color: #F25C3E;
+    vertical-align: middle;
+}
+
+.peccancy-server-info li.image {
+    margin-bottom: 0;
+    padding-bottom: .2rem;
+}
+
+.peccancy-server-info li.image img {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .1rem;
+}
+
+.peccancy-order-number {
+    background-color: #fff;
+    padding: .3rem 0;
+    font-size: .26rem;
+    color: #999999;
+    margin-top: .2rem;
+}
+
+.peccancy-order-number p {
+    margin-bottom: .3rem;
+    padding-left: .3rem;
+}
+
+.peccancy-order-number p:last-child {
+    margin: 0;
+}
+
+
+
+

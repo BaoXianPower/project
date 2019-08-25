@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <title>地址管理</title>
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/annual.css">
+</head>
+<body>
+    <header>
+        <a href="javascript:;" class="go-back">
+            <i></i>
+        </a>
+        <span class="font-color-f25c3e">地址管理</span>
+    </header>
+
+    <section class="main-list">
+
+        <div class="contact-info">
+            <label for="concat">收货人</label>
+            <input type="text" id="concat" placeholder="请填写姓名">
+        </div>
+
+        <div class="contact-info">
+            <label for="phoneNumber">联系电话</label>
+            <input type="text" id="phoneNumber" placeholder="请填写联系电话">
+        </div>
+
+        <div class="address-info">
+            <div class="address-info-probably clearfix">
+                <div class="fl">
+                    配送地址
+                </div>
+
+                <div class="fr">
+                    <span class="place">请选择省、市、区</span>
+                </div>
+
+                <i class="arrow-right"></i>
+            </div>
+
+            <div class="address-info-details">
+                <input type="text" placeholder="请填写详细地址(街道、楼牌号等)">
+            </div>
+        </div>
+
+        <div class="address-default clearfix">
+            <div class="fl">设为默认地址</div>
+            <div class="fr">
+                <i id="addressDefault"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script>
+        $(function () {
+
+
+            // 设为默认地址
+            $('#addressDefault').on('click', function (e) {
+                $(this).toggleClass('active')
+            })
+        })
+    </script>
+</body>
+</html>

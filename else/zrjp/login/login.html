@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript">
+
+    (function (doc, win) {
+
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) {
+            return
+          }
+          docEl.style.fontSize = 100 * (clientWidth / 1920) + 'px';
+        };
+      
+      recalc();
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  </script>
+  <link rel="stylesheet" href="login.css">
+  <title>中认佳倍实验室检测系统</title>
+</head>
+<body>
+<div class="login">
+  <div class="login-content">
+    <img src="img/microscope.png" alt="">
+    <div class="login-form">
+      <img class="title" src="img/login-title.png" alt="">
+      <!-- <p class="title">中认佳倍实验室检测系统</p> -->
+      <div class="form-box">
+        <div class="form-item">
+          <label  class="user" for="username"></label>
+          <input type="text" id="username" placeholder="请输入账号">
+        </div>
+
+        <div class="form-item">
+          <label class="psw" for="password"></label>
+          <input type="password" id="password" placeholder="请输入密码">
+        </div>
+
+        <div class="form-item">
+          <input class="remember" type="checkbox" id="remember">
+          <label for="remember"><span>记住我（公共场所慎用）</span></label>
+        </div>
+
+        <div class="form-item">
+          <button class="login-btn">登录</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-footer">
+    <p>Copyright &copy; 2012-2018 中认佳倍实验室检测系统</p>
+  </div>
+</div>
+</body>
+</html>

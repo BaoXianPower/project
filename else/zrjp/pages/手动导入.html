@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html style="overflow-x:auto;overflow-y:auto;">
+<head>
+  <title>手动导入</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="author" content="http://jeesite.com/"/>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=8,IE=9,IE=10"/>
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <script src="http://lmk.javang.cn/zrjp/static/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/css_cerulean/bootstrap.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/awesome/span-awesome.min.css" type="text/css"
+        rel="stylesheet"/>
+  <!--[if lte IE 7]>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/2.3.1/awesome/span-awesome-ie7.min.css" type="text/css"
+        rel="stylesheet"/><![endif]-->
+  <!--[if lte IE 6]>
+  <link href="http://lmk.javang.cn/zrjp/static/bootstrap/bsie/css/bootstrap-ie6.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/bootstrap/bsie/js/bootstrap-ie.min.js"
+          type="text/javascript"></script><![endif]-->
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-select2/3.4/select2.min.css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-select2/3.4/select2.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-validation/1.11.0/jquery.validate.min.css" type="text/css"
+        rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-validation/1.11.0/jquery.validate.min.js"
+          type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/jquery-jbox/2.3/jquery.jBox-2.3.min.js"
+          type="text/javascript"></script>
+  <script src="http://lmk.javang.cn/zrjp/static/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+  <script src="http://lmk.javang.cn/zrjp/static/common/mustache.min.js" type="text/javascript"></script>
+  <link href="http://lmk.javang.cn/zrjp/static/common/jeesite.css" type="text/css" rel="stylesheet"/>
+  <script src="http://lmk.javang.cn/zrjp/static/common/jeesite.js" type="text/javascript"></script>
+  <script type="text/javascript">var ctx = '/zrjp/a', ctxStatic = 'http://lmk.javang.cn/zrjp/static';</script>
+  <!-- Baidu tongji analytics -->
+  <script>var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?82116c626a8d504a5c0675073362ef6f";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();</script>
+
+
+  <meta name="decorator" content="default"/>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      //$("#name").focus();
+      $("#inputForm").validate({
+        submitHandler: function (form) {
+          loading('正在提交，请稍等...');
+          form.submit();
+        },
+        errorContainer: "#messageBox",
+        errorPlacement: function (error, element) {
+          $("#messageBox").text("输入有误，请先更正。");
+          if (element.is(":checkbox") || element.is(":radio") || element.parent().is(".input-append")) {
+            error.appendTo(element.parent().parent());
+          } else {
+            error.insertAfter(element);
+          }
+        }
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="./css/zrjp.css">
+</head>
+<body>
+<form id="inputForm" class="form-horizontal" action="#" method="post">
+
+  <div class="zrjp-form-box clearfix">
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">录入时间：</label>
+      <div class="controls controls-row">
+        <input class="input-large required" type="text">
+        <span class="help-inline"><i style="color: red">*</i> </span>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">报告类型：</label>
+      <div class="controls">
+        <input class="input-large" type="text">
+        <span class="help-inline"><i style="color: red">*</i> </span>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">产品类别：</label>
+      <div class="controls">
+        <select name="" id="">
+          <option value="1">aaa</option>
+          <option value="1">aaa</option>
+          <option value="1">aaa</option>
+          <option value="1">aaa</option>
+        </select>
+        <span class="help-inline"><i style="color: red">*</i> </span>
+      </div>
+    </div>
+
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">任务类型：</label>
+      <div class="controls">
+        <input class="input-large required" type="text">
+        <span class="help-inline"><i style="color: red">*</i> </span>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">检测类别：</label>
+      <div class="controls">
+        <input class="input-large required" type="text">
+        <span class="help-inline"><i style="color: red">*</i> </span>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">检测来源：</label>
+      <div class="controls">
+        <input class="input-large required" type="text">
+        <span class="help-inline"><i style="color: red">*</i> </span>
+      </div>
+    </div>
+
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">内部编号：</label>
+      <div class="controls">
+        <input class="input-large required" type="text" value="">
+        <span class="help-inline"><i style="color: red">*</i> </span>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">申请编号：</label>
+      <div class="controls">
+        <input class="input-large required" type="text" value="">
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-3">
+      <label class="control-label">报告编号：</label>
+      <div class="controls">
+        <input class="input-large required" type="text" value="">
+        <span class="help-inline"><i style="color: red">*</i> </span>
+      </div>
+    </div>
+
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">代理公司：</label>
+      <div class="controls">
+        <input class="input-xlarge " type="text" value="" maxlength="32"/>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">代理公司地址：</label>
+      <div class="controls">
+        <input id="companyName" name="companyName" class="input-xlarge " type="text" value="" maxlength="64"/>
+      </div>
+    </div>
+
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">委托单位地址：</label>
+      <div class="controls">
+        <input id="companyAddress" name="companyAddress" class="input-xlarge " type="text" value=""
+               maxlength="256"/>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">委托单位地址：</label>
+      <div class="controls">
+        <input id="companyPostcode" name="companyPostcode" class="input-xlarge " type="text" value=""
+               maxlength="6"/>
+      </div>
+    </div>
+
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">制造商单位：</label>
+      <div class="controls">
+        <input id="companyTelephone" name="companyTelephone" class="input-xlarge " type="text" value=""
+               maxlength="20"/>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">制造商地址：</label>
+      <div class="controls">
+        <input id="companyFax" name="companyFax" class="input-xlarge " type="text" value="" maxlength="20"/>
+      </div>
+    </div>
+
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">生产厂名称：</label>
+      <div class="controls">
+        <input id="companyTelephone" name="companyTelephone" class="input-xlarge " type="text" value=""
+               maxlength="20"/>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">生产厂地址：</label>
+      <div class="controls">
+        <input id="companyFax" name="companyFax" class="input-xlarge " type="text" value="" maxlength="20"/>
+      </div>
+    </div>
+
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">客户名称：</label>
+      <div class="controls">
+        <input id="companyTelephone" name="companyTelephone" class="input-xlarge " type="text" value=""
+               maxlength="20"/>
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-2">
+      <label class="control-label">邮寄地址：</label>
+      <div class="controls">
+        <input id="companyFax" name="companyFax" class="input-xlarge " type="text" value="" maxlength="20"/>
+      </div>
+    </div>
+
+    <div class="user-info">
+      <div class="user-info-item">
+        <div class="control-group zrjp-control-group-5">
+          <label class="control-label js-select">
+            <select style="margin-top: -3px">
+              <option value="1">联系人1</option>
+              <option value="2">联系人2</option>
+              <option value="3">联系人3</option>
+              <option value="4">联系人4</option>
+            </select>
+          </label>
+          <div class="controls">
+            <input class="input-small" type="text">
+          </div>
+        </div>
+        <div class="control-group zrjp-control-group-5">
+          <label class="control-label">联系电话：</label>
+          <div class="controls">
+            <input class="input-small" type="text">
+          </div>
+        </div>
+        <div class="control-group zrjp-control-group-5">
+          <label class="control-label">邮箱：</label>
+          <div class="controls">
+            <input class="input-small" type="text">
+          </div>
+        </div>
+        <div class="control-group zrjp-control-group-5">
+          <label class="control-label">区域：</label>
+          <div class="controls">
+            <input class="input-small" type="text">
+          </div>
+        </div>
+        <div class="operation">
+          <button type="button" class="btn btn-success js-add-item">添加</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">检验区域：</label>
+      <div class="controls">
+        <input class="input-xxlarge " type="text" style="width: 98%;">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">检验依据：</label>
+      <div class="controls">
+        <input class="input-xxlarge" type="text" style="width: 98%;">
+      </div>
+    </div>
+
+    <div class="control-group zrjp-control-group-4">
+      <label class="control-label">商品名称：</label>
+      <div class="controls">
+        <input class="input-medium" type="text">
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-4">
+      <label class="control-label">规格型号：</label>
+      <div class="controls">
+        <input class="input-medium" type="text">
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-4">
+      <label class="control-label">商标：</label>
+      <div class="controls">
+        <input class="input-medium" type="text">
+      </div>
+    </div>
+    <div class="control-group zrjp-control-group-4">
+      <label class="control-label">数量：</label>
+      <div class="controls">
+        <input class="input-medium" type="text">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">备注：</label>
+      <div class="controls">
+        <input class="input-xxlarge" type="text" style="width: 98%;">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-actions zrjp-actions zrjp-text-center">
+    <input class="btn btn-info" type="button" value="保存">
+    <input class="btn btn-success" type="button" value="保存且入库">
+    <input class="btn" type="button" value="取消并返回">
+  </div>
+
+</form>
+<script>
+
+  $(function () {
+    var userInfo = $('.user-info');
+    userInfo.on('click', '.js-add-item', function () {
+      var itemNode = $(this).parents('.user-info-item');
+      var userType = itemNode.find('.select2-container').select2("data").text;
+      var userVal = itemNode.find('.control-group:eq(0) .controls input').val().trim();
+      var mobile = itemNode.find('.control-group:eq(1) .controls input').val().trim();
+      var emailVal = itemNode.find('.control-group:eq(2) .controls input').val().trim();
+      var areaVal = itemNode.find('.control-group:eq(3) .controls input').val().trim();
+      console.log(userType,userVal,mobile,emailVal,areaVal);
+      if(!userType || !userVal || !mobile || !emailVal || !areaVal){
+        alert('请填写输入框内容！')
+      }else {
+        var delBtn = '<button type="button" class="btn btn-danger js-del-item">删除</button>',
+            currentItem = $(this).parents('.user-info-item'),
+            clone = currentItem.clone();
+
+        var optionHtml =  userInfo.find('.control-label.js-select select:eq(0)').clone();
+        var select = $('<select>').append(optionHtml).html();
+        clone.find('.control-label.js-select').html(select);
+        clone.find('.control-label.js-select select').select2();
+        clone.find('.controls input').val('');
+        if (!clone.find('.operation .js-del-item').length) {
+          clone.find('.operation').append(delBtn);
+        }
+        clone.insertAfter(currentItem);
+      }
+
+
+    });
+
+    userInfo.on('click', '.js-del-item', function () {
+      $(this).parents('.user-info-item').remove()
+    })
+  });
+
+</script>
+</body>
+</html>

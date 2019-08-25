@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <title>填写代办信息</title>
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/peccancy.css">
+</head>
+<body>
+    <header>
+        <a href="javascript:;" class="go-back">
+            <i></i>
+        </a>
+        <span class="font-color-f25c3e">填写代办信息</span>
+    </header>
+
+    <section class="main">
+        <ul class="peccancy-car">
+            <li class="upload-image clearfix">
+                <div class="fl upload-image-display">
+                    <span>行驶证正面照片</span>
+                    <i></i>
+                </div>
+
+                <div class="fr">
+                    <img src="../../images/annual/test.png" alt="test.png">
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+            <li class="upload-image clearfix">
+                <div class="fl upload-image-display">
+                    <span>行驶证副面照片</span>
+                    <i></i>
+                </div>
+
+                <div class="fr">
+                    <img src="../../images/annual/test.png" alt="test.png">
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+            <li class="upload-image clearfix">
+                <div class="fl upload-image-display">
+                    <span>驾驶证正面照片</span>
+                    <i></i>
+                </div>
+
+                <div class="fr">
+                    <span>请上传照片</span>
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+            <li class="upload-image clearfix">
+                <div class="fl upload-image-display">
+                    <span>车主身份证正面照片</span>
+                    <i></i>
+                </div>
+
+                <div class="fr">
+                    <span>请上传照片</span>
+                </div>
+
+                <i class="arrow-right"></i>
+            </li>
+            <li class="input-info">
+                <label for="1">驾驶证档案编号</label>
+                <input type="text" id="1" placeholder="请输入编号后六位">
+            </li>
+            <li class="input-info">
+                <label for="2">驾驶证编号</label>
+                <input type="text" id="2" placeholder="车主本人驾驶证号">
+            </li>
+            <li class="input-info">
+                <label for="3">驾驶证姓名</label>
+                <input type="text" id="3" placeholder="请输入驾驶证姓名">
+            </li>
+            <li class="input-info">
+                <label for="4">驾驶证联系方式</label>
+                <input type="text" id="4" placeholder="请输入手机号">
+            </li>
+        </ul>
+
+        <div class="peccancy-car-handle">
+            <div class="peccancy-next-btn">
+                <span>保存并办理</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 大图预览 -->
+    <div class="mask-image" id="maskImage">
+        <div class="flex justify-content">
+            <img src="../../images/test-image.png" alt="">
+        </div>
+    </div>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+
+    <script>
+        $(function () {
+            // 点击预览大图
+            $('.upload-image > .upload-image-display').on('click', function (e) {
+                $('#maskImage').show();
+            });
+
+            // 关闭大图
+            $('#maskImage').on('click', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    return;
+                }
+                $(this).hide();
+            });
+
+            $("#maskImage").on("touchmove", function(event){
+                event.preventDefault();
+            });
+        })
+    </script>
+
+</body>
+</html>

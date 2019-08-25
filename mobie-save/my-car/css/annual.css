@@ -1,0 +1,764 @@
+/* 年审办理 */
+.annual-six {
+    width: 100%;
+    height: 5.6rem;
+    padding: .7rem .5rem 0 .5rem;
+    background-color: #EDEDED;
+    background-image: url(../images/annual/login_bg@2x.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.annual-six-content {
+    width: 100%;
+    height: 4.6rem;
+    border-radius: .3rem;
+    background-color: #fff;
+    padding: 0.2rem .5rem 0 .5rem;
+}
+
+.annual-six-title {
+    font-size: .52rem;
+    text-align: center;
+    margin-bottom: .55rem;
+}
+
+.annual-six-plate {
+    color: #333333;
+    font-size: .26rem;
+    padding-left: .1rem;
+}
+
+.annual-six-input {
+    height: .85rem;
+    line-height: .85rem;
+    border-bottom: .02rem solid #FE5A51;
+    padding-left: .1rem;
+    font-size: .28rem;
+}
+
+.annual-six-input input {
+    width: 100%;
+    height: .35rem;
+    vertical-align: middle;
+}
+
+.annual-six-input .label {
+    color: #333333;
+}
+
+.annual-six-input .fr {
+    height: .85rem;
+    line-height: .85rem;
+}
+
+.annual-six-input .fr span {
+    margin-right: .35rem;
+    vertical-align: middle;
+}
+
+.annual-six-input .fr span.place {
+    color: #999999;
+}
+
+.annual-six-input .fr i {
+    display: inline-block;
+    width: .20rem;
+    height: .28rem;
+    background: url("../images/annual/arrow_right.png") no-repeat 0 0;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.annual-btn-immediately {
+    background-color: #EDEDED;
+    padding: 0 .5rem !important;
+}
+
+.annual-condition {
+    background-color: #EDEDED;
+    padding-bottom: .2rem;
+}
+
+.annual-condition .condition {
+    padding: .2rem 0 .2rem .5rem;
+}
+
+.condition-title {
+    font-size: .32rem;
+    font-weight: bold;
+}
+
+.condition-title i {
+    display: inline-block;
+    width: .25rem;
+    height: .32rem;
+    margin-right: .2rem;
+    background-image: url(../images/annual/icon_nj@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.condition-content {
+    margin-top: .25rem;
+    font-size: .28rem;
+    color: #9C9C9C;
+}
+
+.condition-content li {
+    margin-bottom: .3rem;
+}
+
+.annual-process {
+    background-color: #EDEDED;
+    padding-bottom: .5rem;
+}
+
+.annual-process .process {
+    padding: .2rem 0 0 .5rem;
+}
+
+.process-title {
+    font-size: .32rem;
+    font-weight: bold;
+}
+
+.process-title i {
+    display: inline-block;
+    width: .32rem;
+    height: .32rem;
+    margin-right: .2rem;
+    background-image: url(../images/annual/icon_right@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.process-content {
+    margin-top: .25rem;
+    position: relative;
+}
+
+.process-content li {
+    margin-bottom: .25rem;
+    padding-left: .5rem;
+}
+
+.process-content li.process-sign {
+    width: .2rem;
+    height: 3.1rem;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/annual/img_lc@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: .05rem;
+    left: 0;
+}
+
+.process-content li .step {
+    font-size: .26rem;
+    color: #333333;
+    margin-bottom: .1rem;
+}
+
+.process-content li .explain {
+    font-size: .24rem;
+    color: #666666;
+}
+
+.annual-next-btn {
+    padding: 0 .2rem;
+}
+
+.annual-next-btn span {
+    display: inline-block;
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    margin: .3rem 0;
+    font-size: .3rem;
+    color: #fffefe;
+    background-color: #F25C3E;
+    border-radius: .1rem;
+}
+
+/* 年审订单确认 */
+.annual-step {
+    width: 100%;
+    height: 1.7rem;
+    background-image: url(../images/annual/annual-step@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.annual-server {
+    background-color: #EDEDED;
+    padding: .2rem 0;
+}
+
+.annual-server .server {
+    height: .9rem;
+    line-height: .9rem;
+    font-size: .32rem;
+    padding-left: .4rem;
+    color: #F74D10;
+    background-color: #ffffff;
+}
+
+.annual-identity {
+
+}
+
+.annual-identity .identity {
+    height: 1.7rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.identity i.arrow-right {
+    display: inline-block;
+    width: .24rem;
+    height: .32rem;
+    background: url("../images/annual/arrow_right.png") no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    right: .35rem;
+    top: .7rem;
+}
+
+.identity-icon {
+    width: 26%;
+    height: 100%;
+    line-height: 1.7rem;
+    padding-left: .85rem;
+}
+
+.identity-icon i {
+    display: inline-block;
+    width: .52rem;
+    height: .64rem;
+    background-image: url(../images/annual/address.png);
+    background-size: contain;
+}
+
+.identity-info {
+    width: 74%;
+    height: 100%;
+    padding-right: .85rem;
+    padding-top: .35rem;
+    font-size: .28rem;
+    color: #333333;
+}
+
+.identity-info .name-phone {
+    margin-bottom: .22rem;
+}
+
+.identity-info .address .address-probably {
+    margin-bottom: .05rem;
+}
+
+.annual-identity .inform {
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .24rem;
+    text-align: center;
+    color: #A3A3A3;
+    background-color: #EDEDED;
+}
+
+.annual-car {
+
+}
+
+.annual-car li {
+    font-size: .24rem;
+    padding: 0 .7rem 0 .45rem;
+    border-bottom: .02rem solid #DDDDDD;
+    position: relative;
+}
+
+.annual-car li .fl span {
+    vertical-align: middle;
+    color: #666666;
+}
+
+.annual-car li .fr span {
+    vertical-align: middle;
+    color: #999999;
+}
+
+.annual-car li i.arrow-right {
+    display: inline-block;
+    width: .18rem;
+    height: .24rem;
+    background: url("../images/annual/arrow_right.png") no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    right: .35rem;
+    top: .6rem;
+}
+
+.annual-car li.select-time i.arrow-right {
+    top: .29rem;
+}
+
+.annual-car li.upload-image .fl,
+.annual-car li.upload-image .fr {
+    height: 1.4rem;
+    line-height: 1.4rem;
+}
+
+.annual-car li.upload-image .fl i {
+    display: inline-block;
+    width: .26rem;
+    height: .26rem;
+    background-image: url(../images/annual/icon_note@2x.png);
+    background-size: contain;
+    margin-left: .1rem;
+    vertical-align: middle;
+}
+
+.annual-car li.upload-image .fr {
+
+}
+
+.annual-car li.upload-image .fr img {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+}
+
+.annual-car li.select-time .fl,
+.annual-car li.select-time .fr {
+    height: .8rem;
+    line-height: .8rem;
+}
+
+.annual-car li.select-time .fr span.value {
+    color: #333333;
+}
+
+.annual-money {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F5F5F5;
+    padding-top: .17rem;
+}
+
+.annual-money .money {
+    border-top: .02rem solid #DDDDDD;
+    font-size: .28rem;
+}
+
+.annual-money .money .fl,
+.annual-money .money .fr {
+    width: 50%;
+    height: .98rem;
+    line-height: .98rem;
+    text-align: center;
+}
+
+.annual-money .money .fl {
+    color: #F25C3E;
+}
+
+.annual-money .money .fr {
+    color: #ffffff;
+    background-color: #F25C3E;
+}
+
+/* 地址管理 */
+html, body {
+    height: 100%;
+}
+.main-list {
+    position: fixed;
+    top: .88rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - .88rem);
+    background-color: #F5F5F5;
+    overflow: auto;
+}
+
+.main-list-pay {
+    height: calc(100% - 1.86rem);
+}
+
+.contact-info {
+    height: 1.14rem;
+    line-height: 1.14rem;
+    border-bottom: .02rem solid #DDDDDD;
+    color: #666666;
+    font-size: .28rem;
+    background-color: #FCFBF9;
+}
+
+.contact-info label {
+    display: inline-block;
+    width: 32%;
+    vertical-align: middle;
+    padding-left: .3rem;
+    color: #333333;
+}
+
+.contact-info input {
+    width: 66%;
+    height: .4rem;
+    background-color: #FCFBF9;
+}
+
+.address-info {
+    padding-left: .2rem;
+    font-size: .28rem;
+    background-color: #FCFBF9;
+}
+
+.address-info-probably {
+    padding-left: .1rem;
+    padding-right: .62rem;
+    border-bottom: .02rem solid #EEEEEE;
+    position: relative;
+}
+
+.address-info-probably .fl,
+.address-info-probably .fr {
+    height: 1.14rem;
+    line-height: 1.14rem;
+}
+
+.address-info-probably .fl {
+    color: #333333;
+}
+
+.address-info-probably .fr span.place {
+    color: #AAAAAA;
+}
+
+.address-info-probably i.arrow-right {
+    display: inline-block;
+    width: .24rem;
+    height: .32rem;
+    background: url("../images/annual/arrow_right.png") no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    right: .26rem;
+    top: .4rem;
+}
+
+.address-info-details {
+    height: 1.78rem;
+    line-height: 1.78rem;
+    padding-left: .1rem;
+}
+
+.address-info-details input {
+    width: 100%;
+    height: .7rem;
+    background-color: #FCFBF9;
+    vertical-align: middle;
+}
+
+.address-default {
+    margin-top: .18rem;
+    background-color: #FCFBF9;
+    padding-left: .3rem;
+    padding-right: .35rem;
+}
+
+.address-default .fl,
+.address-default .fr {
+    height: 1.28rem;
+    line-height: 1.28rem;
+}
+
+.address-default .fl {
+    font-size: .28rem;
+    color: #666666;
+}
+
+.address-default .fr {
+    padding-top: .48rem;
+}
+
+.address-default .fr i {
+    display: block;
+    width: .85rem;
+    height: .4rem;
+    background-image: url(../images/annual/icon_default1@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.address-default .fr i.active {
+    background-image: url(../images/annual/icon_default2@2x.png);
+}
+
+/* 支付成功 */
+.annual-apy-success {
+    text-align: center;
+    padding-top: 1.2rem;
+    padding-bottom: 1.7rem;
+}
+
+.annual-apy-success i {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-image: url(../images/annual/icon_right@2x.png);
+    background-size: cover;
+}
+
+.annual-apy-success p {
+    font-size: .3rem;
+    color: #555555;
+    margin-top: .45rem;
+}
+
+/* 我的订单 */
+.annual-order-list {
+    background-color: #fff;
+    padding-top: .32rem;
+    margin-bottom: .2rem;
+}
+
+.annual-order-list > div {
+    padding-left: .3rem;
+    padding-right: .22rem;
+}
+
+.order-list-number {
+    font-size: .24rem;
+    margin-bottom: .26rem;
+}
+
+.order-list-number .fl {
+    color: #727272;
+}
+
+.order-list-number .fr {
+    color: #FA1D1D;
+    font-weight: bold;
+}
+
+.order-list-number .fr.success {
+    color: #06C257;
+}
+
+.order-list-plate {
+    font-size: .28rem;
+    color: #727272;
+    margin-bottom: .26rem;
+}
+
+.order-list-plate .content {
+    color: #333333;
+}
+
+.order-list-plate .fr {
+    color: #333333;
+}
+
+.order-list-money .fr {
+    font-size: .24rem;
+    font-weight: bold;
+    color: #F25C3E;
+    padding-bottom: .16rem;
+}
+
+.order-list-operation {
+    border-top: .02rem solid #EEEEEE;
+    font-size: .26rem;
+}
+
+.order-list-operation .fr {
+    height: .92rem;
+    line-height: .92rem;
+}
+
+.order-list-operation .fr .cancel {
+    display: inline-block;
+    width: 1.4rem;
+    height: .5rem;
+    vertical-align: middle;
+    background-color: #fff;
+    border: .02rem solid #999999;
+    border-radius: .05rem;
+    color: #999999;
+    margin-right: .5rem;
+}
+
+.order-list-operation .fr .pay {
+    display: inline-block;
+    width: 1.4rem;
+    height: .5rem;
+    vertical-align: middle;
+    background-color: #F74A0B;
+    border-radius: .05rem;
+    color: #ffffff;
+}
+
+.annual-order-list-none {
+    padding-top: 2.68rem;
+    text-align: center;
+}
+
+.annual-order-list-none i {
+    display: inline-block;
+    width: .94rem;
+    height: 1.05rem;
+    background-image: url(../images/annual/icon_zd@2x.png);
+    background-size: cover;
+}
+
+.annual-order-list-none p {
+    font-size: .3rem;
+    color: #999999;
+    margin-top: .25rem;
+}
+
+/* 订单详情 */
+.annual-status {
+    background-color: #fff;
+    border-bottom: .02rem solid #EEEEEE;
+}
+
+.annual-status .fl {
+    height: 1.84rem;
+    padding-left: 1.07rem;
+}
+
+.annual-status .fl .status {
+    font-size: .46rem;
+    color: #FF6142;
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+}
+
+.annual-status .fl .time {
+    font-size: .24rem;
+    color: #999999;
+}
+
+.annual-status .fr {
+    padding-top: .3rem;
+    padding-right: .85rem;
+}
+
+.annual-status .fr i {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.35rem;
+    background-image: url(../images/annual/icon_dfk@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.order-details {
+    background: #ffffff;
+    border-bottom: .02rem solid #EEEEEE;
+}
+
+.order-details .identity-icon {
+    padding-left: .58rem;
+    width: 22%;
+}
+
+.order-details .identity-info {
+    width: 77%;
+}
+
+.annual-project {
+    background-color: #fff;
+    padding: .2rem .3rem;
+    font-size: .3rem;
+    color: #F74A0B;
+}
+
+.annual-project .fr .count {
+    color: #333333;
+}
+
+.annual-project .fr .money {
+    color: #F15B3D;
+}
+
+.annual-project .fr .title {
+    color: #333333;
+    margin-right: .25rem;
+}
+
+.annual-project-money {
+    border-top: .02rem solid #EEEEEE;
+    margin-bottom: .1rem;
+}
+
+.annual-server-info {
+    background-color: #fff;
+    padding-top: .3rem;
+    padding-left: .3rem;
+}
+
+.annual-server-info li {
+    font-size: .28rem;
+    color: #333333;
+    margin-bottom: .2rem;
+}
+
+.annual-server-info li.title {
+    margin-bottom: .3rem;
+    font-size: .3rem;
+    color: #666666;
+}
+
+.annual-server-info li.title span {
+    display: inline-block;
+    width: .08rem;
+    height: .3rem;
+    background-color: #F25C3E;
+    vertical-align: middle;
+}
+
+.annual-server-info li.image {
+    margin-bottom: 0;
+    padding-bottom: .2rem;
+}
+
+.annual-server-info li.image img {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .1rem;
+}
+
+.annual-order-number {
+    background-color: #fff;
+    border-top: .02rem solid #EEEEEE;
+    padding: .3rem 0;
+    font-size: .26rem;
+    color: #999999;
+}
+
+.annual-order-number p {
+    margin-bottom: .3rem;
+    padding-left: .3rem;
+}
+
+.annual-order-number p:last-child {
+    margin: 0;
+}
+
+
+
+
+
+

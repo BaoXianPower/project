@@ -1,9 +1,246 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <title>违章信息</title>
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/peccancy.css">
+</head>
+<body>
+    <header>
+        <a href="javascript:;" class="go-back">
+            <i></i>
+        </a>
+        <span class="font-color-f25c3e">违章信息</span>
+    </header>
+
+    <section class="main-list main-list-pay">
+
+        <!-- tab 栏 -->
+        <div class="peccancy-info-type" id="peccancyInfoType">
+            <div id="sure" class="type active">可处理(3)</div>
+            <div id="not" class="type">不可处理(2)</div>
+            <div id="already" class="type">已处理(3)</div>
+        </div>
+
+        <!-- 可处理 -->
+        <div class="peccancy-info-sure">
+
+            <div class="peccancy-info-sure-list checkbox-select">
+                <div class="input-checkbox">
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1"></label>
+                </div>
+                <div class="content">
+                    <div class="peccancy-info-content">
+                        在高速公路以外的道路不按规定车道行驶
+                    </div>
+
+                    <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                        杭州市江虹路南路口
+                        <div class="fr">2018-05-08</div>
+                    </div>
+
+                    <div class="peccancy-info-content">
+                        <span class="penalty">罚款100元, 记2分</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="peccancy-info-sure-list checkbox-select">
+                <div class="input-checkbox">
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2"></label>
+                </div>
+                <div class="content">
+                    <div class="peccancy-info-content">
+                        在高速公路以外的道路不按规定车道行驶
+                    </div>
+
+                    <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                        杭州市江虹路南路口
+                        <div class="fr">2018-05-08</div>
+                    </div>
+
+                    <div class="peccancy-info-content">
+                        <span class="penalty">罚款100元, 记2分</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="peccancy-info-sure-list checkbox-select">
+                <div class="input-checkbox">
+                    <input type="checkbox" id="checkbox3">
+                    <label for="checkbox3"></label>
+                </div>
+                <div class="content">
+                    <div class="peccancy-info-content">
+                        在高速公路以外的道路不按规定车道行驶
+                    </div>
+
+                    <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                        杭州市江虹路南路口
+                        <div class="fr">2018-05-08</div>
+                    </div>
+
+                    <div class="peccancy-info-content">
+                        <span class="penalty">罚款100元, 记2分</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 不可处理 -->
+        <div class="peccancy-info-not" style="display: none;">
+
+            <div class="peccancy-info-not-list">
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+            </div>
+
+            <div class="peccancy-info-not-list">
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 已处理 -->
+        <div class="peccancy-info-already" style="display: none;">
+
+
+            <div class="peccancy-info-already-list">
+
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+
+                <i class="over"></i>
+            </div>
+
+            <div class="peccancy-info-already-list">
+
+                <div class="peccancy-info-content">
+                    在高速公路以外的道路不按规定车道行驶
+                </div>
+
+                <div class="peccancy-info-content pd-b0 pd-t0 clearfix">
+                    杭州市江虹路南路口
+                    <div class="fr">2018-05-08</div>
+                </div>
+
+                <div class="peccancy-info-content">
+                    <span class="penalty">罚款100元, 记2分</span>
+                </div>
+
+                <i class="conduct"></i>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- 支付 -->
+    <div class="peccancy-info-pay">
+        <div class="select-all checkbox-select">
+            <div class="input-checkbox">
+                <input type="checkbox" id="selectAllInput">
+                <label for="selectAllInput"></label>
+                <p>全选</p>
+            </div>
+            <div class="payment">
+                ￥300.00
+                <span class="explain">(共3笔)</span>
+            </div>
+        </div>
+        <div class="pay-money">立即支付</div>
+    </div>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+
+    <script>
+        $(function () {
+
+            // tab 切换
+            $('#peccancyInfoType').on('click', function (e) {
+                if (!$(e.target).hasClass('type') && $(e.target).hasClass('active')) {
+                    return;
+                }
+
+                var targetId = e.target.id;
+
+                $(this).children('.type').removeClass('active');
+                $(e.target).addClass('active');
+
+                // 同步展示相应的 tab 页
+                $('.peccancy-info-sure, .peccancy-info-not, .peccancy-info-already').hide();
+                $('.peccancy-info-' + targetId).show();
+
+                // 支付显示
+                if (targetId === 'sure') {
+                    $('.main-list').addClass('main-list-pay');
+                    $('.peccancy-info-pay').show();
+                } else {
+                    $('.main-list').removeClass('main-list-pay');
+                    $('.peccancy-info-pay').hide();
+                }
+            });
+
+            // 选中
+            $('.checkbox-select').on('click', function (e) {
+
+                var domCheckbox = $(this).find('input[type=checkbox]');
+
+                var checked = domCheckbox.prop('checked');
+
+                domCheckbox.prop('checked', !checked);
+
+                if (domCheckbox.attr("id") === 'selectAllInput') {
+                    $('.checkbox-select').find('input[type=checkbox]').prop('checked', !checked);
+                }
+            });
+
+        })
+    </script>
+
+</body>
 </html>
