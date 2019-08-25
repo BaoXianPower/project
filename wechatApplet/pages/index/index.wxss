@@ -1,0 +1,16 @@
+/**index.wxss**/
+
+.container {
+  background-color: #fff;
+  min-height: 100%;
+  display: block;
+}
+
+.upBtn {
+  margin-left: 14rpx;
+  line-height: 28px;
+  color: #09bb07;
+  width: 30px;
+  height: 30px;
+  white-space: nowrap;
+}

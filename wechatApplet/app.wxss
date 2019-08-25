@@ -1,0 +1,363 @@
+@import 'weui/weui.wxss';
+
+view, scroll-view, swiper, swiper-item, movable-area, movable-view, cover-view,
+cover-image, icon, text, rich-text, progress, button, checkbox-group, checkbox,
+form, input, label, picker, picker-view, radio-group, radio, slider, switch,
+textarea, navigator, functional-page-navigator, image, video, camera,
+live-player, live-pusher, map, canvas, open-data, web-view, ad {
+  box-sizing: border-box;
+}
+
+/**app.wxss**/
+
+.container {
+  font-size: 30rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: content-box;
+}
+
+.container .weui-search-bar {
+  padding: 20rpx 36rpx;
+  border-bottom: none;
+  border-top: none;
+  background-color: #fff;
+  position: relative;
+}
+
+.container .weui-search-bar__label {
+  background-color: #eee;
+  border-radius: 30rpx;
+}
+
+.container .weui-search-bar__input {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.container .weui-search-bar__form {
+  border: none;
+  background-color: #eee;
+  border-radius: 30rpx;
+}
+
+.container .weui-search-bar .pullTag {
+  position: absolute;
+  left: 36rpx;
+  top: 80rpx;
+  z-index: 3;
+  font-size: 26rpx;
+}
+
+.container .weui-search-bar__cancel-btn {
+  color: #000;
+}
+
+.pullTag .iconP {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 30rpx;
+}
+
+.pullTag .tagB {
+  width: 678rpx;
+  height: auto;
+  border-radius: 10rpx;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tagB .tit {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-left: 30rpx;
+  color: #ccc;
+}
+
+.tagB .tags {
+  width: auto;
+  height: auto;
+  padding-left: 30rpx;
+}
+
+.tagB .tags .tag {
+  width: 140rpx;
+  height: 54rpx;
+  background-color: #fff;
+  color: #000;
+  font-size: 26rpx;
+  line-height: 54rpx;
+  text-align: center;
+  margin: 0 20rpx 20rpx 0;
+  border-radius: 8rpx;
+}
+
+.tagB .tags .sel {
+  background-color: #bbb;
+}
+
+.shareBtn {
+  width: 135rpx;
+  height: 135rpx;
+  position: fixed;
+  right: 14rpx;
+  bottom: 270rpx;
+}
+
+.shareBtn .imB {
+  width: 100%;
+  height: 100%;
+}
+
+.wxParse-img {
+  display: block !important;
+}
+
+.space {
+  height: 20rpx;
+  background-color: #f2f2f2;
+}
+
+.pics-cus {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-left: 40rpx;
+}
+
+.pics-cus .pic-cus {
+  float: left;
+  width: 320rpx;
+  height: 480rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  background-color: #eee;
+  margin: 0 30rpx 30rpx 0;
+  position: relative;
+}
+
+.pics-cus2{
+  padding-left: 55rpx;
+}
+.pics-cus2 .pic-cus2{
+  margin-right: 0 !important;
+  border-radius: 0 !important;
+}
+
+.pic-cus .pic {
+  width: 100%;
+  height: 100%;
+}
+
+.pics-cus .pic-cus .serialB {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pics-cus .pic-cus .name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pic-cus .name .cartB {
+  width: 46rpx;
+  height: 46rpx;
+  margin: 7rpx auto;
+}
+
+.pics-cus .pic-cus .selBox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.pics-cus .pic-cus .selBox .imgB {
+  width: 136rpx;
+  height: 136rpx;
+  margin: 172rpx auto;
+}
+
+.image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.image-wrap .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.sty-color {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.centerT {
+  text-align: center;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.no-more-goods {
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 50rpx;
+  padding-bottom: 48rpx;
+  color: #999;
+}
+
+.doBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #eee;
+}
+
+.doBox .btn1 {
+  width: 375rpx;
+  height: 100rpx;
+  float: left;
+  color: #000;
+  background-color: #eee;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.doBox .btn2 {
+  width: 375rpx;
+  height: 100rpx;
+  float: left;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #000;
+}
+
+.titPut-cus {
+  width: 555rpx;
+  height: 130rpx;
+  padding: 10rpx;
+  border: 1px solid #f1f1f1;
+  color: #000;
+}
+
+.modelB {
+  width: 555rpx;
+  height: auto;
+}
+
+.modelB .modelT {
+  font-size: 34rpx;
+  width: 100%;
+  height: 58rpx;
+  line-height: 35rpx;
+  margin: 36rpx 0 26rpx;
+  color: #000;
+  text-align: center;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+
+.modelB .models {
+  width: 100%;
+  max-height: 300rpx;
+  overflow: auto;
+}
+
+.models .model{
+  width: 261rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  background-color: #eee;
+  color: #666;
+  margin: 0 33rpx 22rpx 0;
+}
+
+.models .sel{
+  background-color: #000;
+  color: #fff;
+}
+
+.model:nth-child(2n){
+  margin-right: 0;
+}
+
+.notT {
+  color: #999;
+}
+
+/*抛物线动画*/
+
+.good_box {
+  width: 18px;
+  height: 18px;
+  position: fixed;
+  border-radius: 50%;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  z-index: +99;
+  background: red;
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

@@ -1,0 +1,59 @@
+<view class="container page cart clearfix">
+<view class='freeB'>您还有<text class='num bold'>{{freeNum}}</text>次花型免费购买额度</view>
+  <view class="no-order" hidden="{{cartNum ? true : false}}">
+    <image src="/images/app/no-order.png" class="no-order-img"></image>
+    <view class="text">购物车为空</view>
+  </view>
+  <view class="order-list clearfix" hidden="{{cartNum ? false : true}}">
+    <view class="a-order " wx:for-items="{{cartList}}" wx:key="{{index}}" hidden="{{item.list.length? false : true}}">
+      <view class="order-date">
+        <view class='selB fl image-wrap' bindtap="selectItemHandler" data-index="{{index}}">
+          <image src="/images/detail/sel.png" hidden="{{item.select ? true : fasle}}" class='image' mode='aspectFit'></image>
+          <image src="/images/detail/sel-ed.png" hidden="{{item.select ? fasle : true}}" class='image' mode='aspectFit'></image>
+        </view>
+        <view class="bagBox fl image-wrap">
+          <image src="/images/app/bag.png" class='image' mode='aspectFit'></image>
+        </view>
+        <view class="fl">{{item.name}}</view>
+      </view>
+      <view>
+        <view class="orderBox" wx:for-items="{{item.list}}" wx:for-item="el" wx:for-index="index2" wx:key="{{index2}}">
+          <view class='fl selB image-wrap' bindtap="selectOneHandler" data-index="{{index}}" data-index2="{{index2}}">
+            <image src="/images/detail/sel.png" hidden="{{el.select ? true : fasle}}" class='image' mode='aspectFit'></image>
+            <image src="/images/detail/sel-ed.png" hidden="{{el.select ? fasle : true}}" class='image' mode='aspectFit'></image>
+          </view>
+          <view class='fl img-box image-wrap'>
+            <image class='image' mode="aspectFit" data-index='{{index}}' data-order='{{item}}' bindtap='previewImg' src="{{el.thumbUrl}}"> </image>
+          </view>
+          <view class="fl infoBox">
+            <view class="price">
+              <text class="f35">{{el.price}}</text> 次</view>
+            <view class="">
+              <text class="tit">编号</text> {{el.serial}}</view>
+            <view class="">
+              <text class="tit">尺寸</text> {{el.width}}CM * {{el.height}}CM</view>
+            <view class="">
+              <text class="tit">格式</text> {{el.fileType}} / {{el.dpi}}DPI</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="footBox" hidden="{{cartNum ? false : true}}">
+    <view class='fl selAllBtn image-wrap' bindtap="selectAllHandler">
+      <image src="/images/detail/sel.png" hidden="{{selectAll ? true : fasle}}" class='image' mode='aspectFit'></image>
+      <image src="/images/detail/sel-ed.png" hidden="{{selectAll ? fasle : true}}" class='image' mode='aspectFit'></image>
+    </view>
+    <view class="fl" bindtap="selectAllHandler">全选</view>
+    <view class="fl btnT {{!selNum ? 'notT':''}}" bindtap="deleteAllHandler">删除</view>
+    <view class='btn2 fr' bindtap='buyNowHandler'>立即购买</view>
+  </view>
+
+  <modal id="modal" title="提示" hidden="{{!showPrice}}" bindcancel="cancelHandler" bindconfirm="confirmBuyHandler" catchtouchmove="ture">
+    <view class='centerT'>本次订单共<text class='sty-color'>1</text>张花型，将扣除<text class='sty-color bold'>1</text>次花型免费购买额度！    
+    </view>
+    <view class='centerT' hidden="{{!payInfo.freePatternNum}}">其中<text class='sty-color'>{{payInfo.freePatternNum}}</text>张花型已购买，将不扣除免费额度</view>
+  </modal>
+</view>

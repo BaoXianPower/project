@@ -1,0 +1,45 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class='login-img image-wrap'>
+    <image class='image' src="/images/app/logo4.png"></image>
+  </view>
+
+  <view class='texT'>登录</view>
+
+  <view class='login-T image-wrap'>
+    <image class="image" src="/images/app/loginT.png"></image>
+  </view>
+
+  <view class="login-from">
+    <view class="myno clearfix">
+      <!-- 用户名 -->
+      <view class="weui-cell weui-cell_input">
+        <image class="nameImage" src="/images/app/name.png"></image>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="no" bindinput="nameinput" value='{{userName}}' placeholder="用户名" />
+        </view>
+      </view>
+    </view>
+    <view class="mypwd clearfix">
+      <!-- 密码 -->
+      <view class="weui-cell weui-cell_input">
+        <image class="nameImage" src="/images/app/key.png"></image>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="password" name="pwd" bindinput="pwdinput" placeholder="密码" value='{{password}}' />
+        </view>
+      </view>
+    </view>
+
+    <!--按钮-->
+    <view class="loginBtn" bindtap='loginHandler'>登录</view>
+
+    <button class='bindBtn fr' open-type="getPhoneNumber" bindgetphonenumber="bindHandler">
+    <view class='ico image-wrap fl'> <image class="image" src="/images/app/wx.png"></image></view>
+    <text class='fl'>微信绑定米绘账号</text>
+    </button>
+  </view>
+
+  <view class='bottomI image-wrap'>
+  <image class='image' src="/images/app/bottomIcon.png" />
+  </view>
+</view>

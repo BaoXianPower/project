@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/patternRandom/patternRandom",
+    "pages/resultPattern/resultPattern",
+    "pages/myCart/myCart",
+    "pages/myOrder/myOrder",
+    "pages/patternSearch/patternSearch",
+    "pages/patternDetail/patternDetail",
+    "pages/patternDetail2/patternDetail2",
+    "pages/share/share"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/app/i-con1.png",
+        "selectedIconPath": "images/app/i-con1h.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/patternRandom/patternRandom",
+        "iconPath": "images/app/i-con2.png",
+        "selectedIconPath": "images/app/i-con2h.png",
+        "text": "智能设计"
+      },
+      {
+        "pagePath": "pages/resultPattern/resultPattern",
+        "iconPath": "images/app/i-con3.png",
+        "selectedIconPath": "images/app/i-con3h.png",
+        "text": "我的工作室"
+      },
+      {
+        "pagePath": "pages/myCart/myCart",
+        "iconPath": "images/app/i-con4.png",
+        "selectedIconPath": "images/app/i-con4h.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/myOrder/myOrder",
+        "iconPath": "images/app/i-con5.png",
+        "selectedIconPath": "images/app/i-con5h.png",
+        "text": "我的订单"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

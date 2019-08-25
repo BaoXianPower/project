@@ -1,0 +1,58 @@
+<!--pages/patternDetail/patternDetail.wxml-->
+<view class='container page patternDetail'>
+  <view class="imagBox">
+    <view class="picShow" wx:if="{{!selModel.id}}">
+      <image style="width: 750rpx; height: 1125rpx;"  lazy-load="true" mode="aspectFill" src="{{patternInfo.thumbUrl}}"></image>
+    </view>
+    <view class="modelShow" wx:else style="background:{{'url('+patternInfo.thumbUrl+') repeat'}}">
+      <image class="image" lazy-load="true" src="{{selModel.thumbUrl}}"></image>
+    </view>
+    <view class='slideBox'>
+      <view bindtap='selPatternHandler' class="model fl {{!selModel.id && 'sel'}}">
+        <image class="image" lazy-load="true" mode="aspectFit" src="{{patternInfo.thumbUrl}}"></image>
+      </view>
+      <view wx:for-items="{{modelList}}" class="model fl {{item.id==selModel.id && 'sel'}}" bindtap='selModelHandler' data-item="{{item}}" wx:key="{{index}}">
+        <image class="image" lazy-load="true" src="{{item.thumbUrl}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="infoBox">
+    <view class='info'>
+      <text class='tit'>编码：</text>
+      <text class='para'>{{patternInfo.serial}}</text>
+    </view>
+    <view class='info'>
+      <text class='tit'>尺寸：</text>
+      <text class='para'>{{patternInfo.width}}*{{patternInfo.height}} cm {{patternInfo.dpi}}dpi</text>
+    </view>
+    <view class='info'>
+      <text class='tit'>格式：</text>
+      <text class='para'>{{patternInfo.fileType}} 分层大图</text>
+    </view>
+  </view>
+
+  <view class="wornBox">
+    <view>
+      <text class='point'>•</text>VIP购买一张花型将扣除
+      <text class="sty-color">1</text>次花型免费购买额度</view>
+    <view>
+      <text class='point'>•</text>您还有
+      <text class="sty-color">{{freeNum}}</text>次花型免费购买额度</view>
+  </view>
+
+  <view class="footBox" wx:if="{{!patternInfo.hasPayed}}">
+    <!-- <view class='cart fl'></view> -->
+    <view class='btn1 fl' bindtap='addTocartHandler'>加入购物车</view>
+    <view class='btn2 fl' bindtap='buyNowHandler'>立即购买</view>
+  </view>
+  <view class="footBox" wx:else>
+    <!-- <view class='cart fl'></view> -->
+    <view class='notBtn fl'>此花型已购买</view>
+  </view>
+
+  <modal id="modal" title="提示" hidden="{{!showPrice}}" bindcancel="cancelHandler" bindconfirm="confirmBuyHandler" catchtouchmove="ture">
+   <view class='centerT'>本次订单共<text class='sty-color'>1</text>张花型，将扣除<text class='sty-color bold'>1</text>次花型免费购买额度！</view>
+  </modal>
+
+
+</view>

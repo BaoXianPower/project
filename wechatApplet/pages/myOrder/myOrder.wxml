@@ -1,0 +1,62 @@
+<view class="container page">
+  <view class="page__bd" hidden="{{orderList ? false : true}}">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text " class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" confirm-type="search" bindconfirm='toSearch' />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+  </view>
+
+  <view class="no-order" hidden="{{orderList ? true : false}}">
+    <image src="/images/app/no-order.png" class="no-order-img"></image>
+    <view class="text">暂无订单</view>
+  </view>
+  <view class="order-list" hidden="{{orderList ? false : true}}">
+    <view class="a-order" wx:for-items="{{orderList}}" wx:for-item="order" wx:key="{{index}}">
+      <view class="order-date">
+        <view class="date-box">订单号:{{order.serial}}</view>
+        <view class="status">{{order.placeTime}}</view>
+      </view>
+      <!-- <view class="goods-info" bindtap="orderDetail" data-id="{{item.id}}">
+                <view class="goods-des">
+                   <view>订单号:{{order.serial}} </view>
+                   <view>备注： 图片生成中</view>
+                </view>
+            </view> -->
+      <view>
+        <view class="orderBox" wx:for-items="{{order.orderItems}}" wx:for-item="el" wx:key="{{index}}">
+          <view class='fl img-box image-wrap'>
+            <image class='image' mode="aspectFit" data-index='{{index}}' data-order='{{order}}' bindtap='previewImg' src="{{el.thumbUrl}}"> </image>
+          </view>
+          <view class="fl infoBox">
+            <view class="price">
+              <text class="f35">{{el.price}}</text> 次</view>
+            <view class="">
+              <text class="tit">编号</text> {{el.serial}}</view>
+            <view class="">
+              <text class="tit">尺寸</text> {{el.width}}CM * {{el.height}}CM</view>
+            <view class="">
+              <text class="tit">格式</text> {{el.fileType}} / {{el.dpi}}DPI</view>
+            <view class="sty-color" hidden='{{el.ossPath ? true:false}}'>预计完成时间:{{el.completeTime}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="price-box">
+        <view class="total-price fl">请前往pc端下载订单花型！</view>
+        <view class="cancel-btn fr" bindtap="deleteOrderHandler" data-id="{{order.id}}">删除</view>
+        <!-- <view class="btn topay-btn" bindtap="downloadHandler">下载花型</view> -->
+      </view>
+    </view>
+  </view>
+</view>

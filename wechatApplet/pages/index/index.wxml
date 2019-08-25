@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<view class="container page">
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text " class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindtap="showTagHandler" confirm-type="search" bindconfirm='toSearch' />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="upBtn image-wrap" hidden="{{inputShowed}}" bindtap="imageSearch">
+        <image src="../../images/app/camera.png" class='image' mode='aspectFit'></image>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+
+      <view class='pullTag' hidden="{{!tagsShowed}}">
+        <view class='iconP image-wrap'>
+          <image class="image" mode="aspectFit" src="../../images/detail/lead.png"></image>
+        </view>
+        <view class='tagB clearfix'>
+          <view class='tit clearfix'>热门分类</view>
+          <view class='tags clearfix'>
+            <!-- <view class="tag fl {{tag==item.name ? 'sel' :''}}" wx:for="{{tagList}}" wx:key="index" data-name="{{item.name}}" bindtap="selectTagHandler">{{item.name}}</view> -->
+            <view class="tag fl" wx:for="{{tagList}}" wx:key="index" data-name="{{item.name}}" bindtap="selectTagHandler">{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='pics-cus clearfix'>
+    <view wx:for-items="{{patternList}}" wx:key="{{index}}" class='pic-cus'>
+      <view class='pic image-wrap' bindtap='detailHandler' data-id="{{item.id}}">
+        <image class="image" lazy-load="true" mode="widthFix" src="{{item.thumbUrl}}"></image>
+      </view>
+      <view class='selBox' hidden='{{sharing ? false : true}}' bindtap='selectHandler' data-index="{{index}}">
+        <view class='imgB image-wrap' hidden='{{item.select ? false : true}}'>
+          <image src="../../images/detail/select.png" class='image' mode='aspectFit'></image>
+        </view>
+      </view>
+      <view class='name' hidden='{{sharing ? true : false}}' bindtap='addAnimate' data-id="{{item.id}}">
+        <view class='cartB image-wrap'>
+          <image src="../../images/app/addCart.png" class='image' mode='aspectFit'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="no-more-goods clearfix" hidden="{{pager.page<pager.totalPage}}">没有更多啦</view>
+
+  <view class='shareBtn' hidden='{{sharing ? true : false}}' bindtap='toShareHandler'>
+    <view class='imB image-wrap'>
+      <image src="../../images/app/share.png" class='image' mode='aspectFit'></image>
+    </view>
+  </view>
+  <view class="doBox" hidden='{{sharing ? false : true}}'>
+    <view class='btn1 fl' bindtap='cancelShareHandler'>取消</view>
+    <view class='btn2 fl' bindtap='shareHandler'>下一步</view>
+  </view>
+
+
+  <view class="good_box" hidden="{{hide_good_box}}" style="left: {{bus_x}}px; top: {{bus_y}}px;">
+  </view>
+
+  <modal id="modal" title="分享标题" hidden="{{!showTitle}}" bindcancel="cancelShareHandler" bindconfirm="confirmShareHandler" catchtouchmove="ture">
+    <textarea class='titPut-cus' placeholder="米绘花型分享" name="textarea" bindinput="bindKeyInput" />
+    <view class='modelB'>
+      <view class='modelT'>挑选模特</view>
+      <view class='models'>
+        <view class="model fl {{item.select?'sel':''}}" wx:for-items="{{modelList}}" wx:key="{{index}}" data-index="{{index}}" bindtap='selectModelHandler'>{{item.title}}</view>
+      </view>
+    </view>
+  </modal>
+
+</view>

@@ -1,0 +1,6 @@
+/* pages/patternSearch/patternSearch.wxss */
+.container {
+  background-color: #fff;
+  min-height: 100%;
+  display: block;
+}

@@ -1,0 +1,155 @@
+page {
+  background-color: #eee;
+}
+
+.container {
+  background-color: #eee;
+  min-height: 100%;
+  display: block;
+  padding-bottom: 150rpx;
+}
+
+.container .freeB {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  font-size: 28rpx;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.freeB .num{
+  font-size: 32rpx;
+}
+
+.no-order {
+  width: 100%;
+  text-align: center;
+  padding-top: 300rpx;
+}
+
+.no-order-img {
+  width: 81rpx;
+  height: 96rpx;
+  margin-bottom: 31rpx;
+}
+
+.no-order .text {
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+}
+
+.order-list {
+  width: 100%;
+  padding-top: 60rpx;
+}
+
+.order-list .a-order {
+  width: 690rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 20rpx auto;
+}
+
+.order-list .a-order .order-date {
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #000;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.order-date .selB {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 25rpx 0 0 20rpx;
+}
+
+.bagBox {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 30rpx 10rpx 0 20rpx;
+}
+
+.icoB {
+  height: 50rpx;
+}
+
+.orderBox {
+  border-bottom: 1rpx solid #ccc;
+  width: 100%;
+  height: 260rpx;
+}
+
+.orderBox .selB {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 110rpx 20rpx 0 20rpx;
+}
+
+.orderBox .img-box {
+  width: 170rpx;
+  height: 220rpx;
+  margin-top: 20rpx;
+  background-color: #eee;
+}
+
+.orderBox .infoBox {
+  width: 400rpx;
+  height: auto;
+  line-height: 45rpx;
+  font-size: 24rpx;
+  margin: 35rpx 0 0 30rpx;
+  color: #111;
+}
+
+.infoBox .price {
+  line-height: 60rpx;
+}
+
+.infoBox .tit {
+  color: #888;
+}
+
+.price .f35 {
+  font-size: 30rpx;
+}
+
+.cart .footBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
+  background-color: #fff;
+}
+
+.footBox .selAllBtn {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 30rpx 20rpx 0 20rpx;
+}
+
+.footBox .btnT {
+  margin-left: 40rpx;
+}
+
+.footBox .btn2 {
+  width: 200rpx;
+  height: 100rpx;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #000;
+}

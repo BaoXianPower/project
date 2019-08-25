@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="container page">
+    <view class="pics-cus clearfix {{withModel?'pics-cus2':''}}">
+        <view wx:for-items="{{patternList}}" wx:key="{{index}}" class="pic-cus {{withModel?'pic-cus2':''}}">
+
+            <view class='pic image-wrap' 
+                  bindtap='previewHandler' 
+                  data-index="{{index}}"
+                  wx:if="{{item.type=='pattern'}}">
+                <image class="image" lazy-load="true" mode="widthFix" src="{{item.thumbUrl}}"></image>
+            </view>
+
+            <view class='pic image-wrap modelB' 
+                  bindtap='previewHandler'
+                  style="background:url('{{item.thumbUrl}}') repeat" 
+                  data-index="{{index}}"
+                  wx:if="{{item.type=='model'}}">
+                <image class="image" lazy-load="true" mode="widthFix" src="{{item.modelUrl}}"></image>
+            </view>
+
+            <view class='selBox' hidden='{{sharing ? false : true}}' wx:if="{{item.type=='pattern'}}"
+                bindtap='selectHandler' data-index="{{index}}">
+                <view class='imgB image-wrap' hidden='{{item.select ? false : true}}'>
+                    <image src="../../images/detail/select.png" class='image' mode='aspectFit'></image>
+                </view>
+            </view>
+            <view class='name' hidden='{{sharing ? true : false}}' wx:if="{{item.type=='pattern'}}">{{item.serial}}
+            </view>
+        </view>
+    </view>
+
+    <!-- 返回首页 -->
+    <view class='backBtn' bindtap='backHandler' hidden='{{sharing}}'>
+        <image src="../../images/app/backBtn.png" class='image' mode='aspectFit'></image>
+    </view>
+
+    <!-- 分享按钮 -->
+    <view class='shareBtn' hidden='{{sharing ? true : false}}' bindtap='toShareHandler'>
+        <view class='imB image-wrap'>
+            <image src="../../images/app/share-sel.png" class='image' mode='aspectFit'></image>
+        </view>
+    </view>
+
+    <view class="doBox" hidden='{{sharing ? false : true}}'>
+        <view class='btn1 fl' bindtap='cancelShareHandler'>取消</view>
+        <view class='btn2 fl' bindtap='sharehandler'>下一步</view>
+    </view>
+
+    <modal id="modal" title="分享标题" hidden="{{!showTitle}}" bindcancel="cancelShareHandler"
+        bindconfirm="confirmShareHandler" catchtouchmove="ture">
+        <textarea class='titPut-cus' placeholder="米绘花型分享" name="textarea" bindinput="bindKeyInput" />
+    </modal>
+
+</view>

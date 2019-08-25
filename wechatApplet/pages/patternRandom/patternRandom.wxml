@@ -1,0 +1,87 @@
+<!--pages/patternRandom/patternRandom.wxml-->
+<view class="container">
+
+    <view class="randomB" hidden='{{upList.length}}'>
+        <view class='imageBox' hidden='{{!doing}}'>
+            <image class="img-cus2" hidden='{{imageUrl}}' lazy-load="true" mode="aspectFit"
+                src="../../images/detail/time.gif" />
+            <image class="img-cus" hidden='{{!imageUrl}}' lazy-load="true" mode="aspectfill" src="{{imageUrl}}" />
+        </view>
+        <view class='startBox' hidden='{{doing}}'>
+            <view class='ico image-wrap'>
+                <image class='image' mode='aspectFit' src="../../images/detail/randomIco.png" />
+            </view>
+            <view class='btn-start image-wrap'>
+                <image class='image' bindtap='startHandler' mode='aspectFit' src="../../images/detail/start.png" />
+            </view>
+            <view class='btn-start2 image-wrap'>
+                <image class='image' bindtap="upImgHandler" mode='aspectFit' src="../../images/detail/start2.png" />
+            </view>
+        </view>
+        <view class='stopBox' hidden='{{!doing}}' bindtap='stopHandler'>
+            <view class='ico fl image-wrap'>
+                <image class='image' mode='aspectFit' src="../../images/detail/stop.png" />
+            </view>
+            <view class='text fl'>暂停生成</view>
+        </view>
+    </view>
+
+    <!-- 智能仿图 -->
+    <view class="copyB" hidden='{{!upList.length}}'>
+
+        <!-- 上传图片 -->
+        <scroll-view class="uplist-box" scroll-y>
+            <view class="flex-box">
+                <view class="uplist-item image-wrap" wx:for="{{upList}}" wx:key="index">
+                    <image class="image" src="{{item.url}}" mode="widthFix" />
+                    <view class="image-wrap uplist-item-delete" data-index="{{index}}" bindtap="cancelHandler">
+                        <image class="image" src="../../images/detail/random-close.png" mode="widthFix" />
+                    </view>
+                </view>
+                <view class="uplist-item image-wrap" bindtap="upImgHandler" hidden="{{upList.length >= 6}}">
+                    <image class="image" src="../../images/detail/random-add.png" mode="widthFix" />
+                </view>
+            </view>
+
+        </scroll-view>
+
+        <!-- 模板图片 -->
+        <view class="temp-box">
+            <view class="temp-title image-wrap">
+                <image class="image" src="../../images/detail/random-select.png" mode="widthFix" />
+            </view>
+
+            <scroll-view 
+                class="temp-list" 
+                scroll-x 
+                wx:if="{{templateList.length}}"
+                bindscrolltolower="getTemplateList">
+                <view class="temp-list-item image-wrap" 
+                      wx:for="{{templateList}}" 
+                      wx:key="index"
+                      data-index="{{index}}"
+                      bindtap="selectTempList">
+                    <image src="{{item.thumbOss}}" class="image" mode="widthFix" />
+                    <view class="temp-list-item-mask" hidden="{{item.select}}">
+                        <view class="image-wrap">
+                            <image src="../../images/detail/selected.png" class="image" mode="widthFix" />
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+
+            <view class="temp-start">
+                <view bindtap="saveImitationDrawing">开始仿图</view>
+            </view>
+        </view>
+
+        <!-- 模板图片 -->
+        <view class="temp-mask" hidden="{{imitationLoading}}">
+            <view class="image-wrap">
+                <!-- <image class='image' mode='aspectFit' src="../../images/detail/loading.gif" /> -->
+                <image class='image' mode='aspectFit' src="../../images/detail/loading.gif" />
+            </view>
+            <view class="text-memo">正在生成中...</view>
+        </view>
+    </view>
+</view>

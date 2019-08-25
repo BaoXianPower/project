@@ -1,0 +1,125 @@
+/* pages/patternDetail/patternDetail.wxss */
+.patternDetail{
+  width: 100%;
+  height: auto;
+  padding-bottom: 150rpx;
+}
+
+.patternDetail .imagBox{
+  width: 100%;
+  height: 1125rpx;
+  position: relative
+}
+.imagBox .picShow{
+  width: 100%;
+  height: 1125rpx;
+   background-size: cover !important;
+}
+.imagBox .modelShow{
+  width: 100%;
+  height: 1125rpx;
+  background-size: 50% !important;
+}
+.modelShow .image{
+  width: 100%;
+  height: 100%;
+}
+
+.imagBox .slideBox{
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 750rpx;
+  height: 200rpx;
+  background-color:#4c4c4c;
+}
+.slideBox .model{
+  width: 120rpx;
+  height: 180rpx;
+  background-color: #fff;
+  margin: 10rpx 15rpx;
+}
+.slideBox .sel{
+  /* box-shadow: 0 0 15px red; */
+   border: 2rpx solid #fff;
+}
+.slideBox .model .image{
+  width: 100%;
+  height: 100%;
+}
+
+.patternDetail .infoBox{
+  margin-top: 50rpx;
+  width: 100%;
+  height: auto;
+  font-size:30rpx;
+  line-height: 50rpx;
+  padding-left: 80rpx;
+}
+
+.infoBox .tit{
+  font-weight: bold;
+  width: 150rpx;
+  color:#8d8d8d;
+}
+
+.patternDetail .wornBox{
+  margin: 50rpx auto 0;
+  width: 700rpx;
+  height: auto;
+  font-size:30rpx;
+  line-height: 50rpx;
+  background-color: #eee;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+
+.wornBox .point{
+  margin-right: 10rpx;
+}
+
+
+
+.patternDetail .footBox{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #f1f1f1;
+}
+/* .footBox .cart{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  border:1rpx solid #ccc;
+} */
+.footBox .btn1{
+  width: 375rpx;
+  height: 100rpx;
+  float: left;
+  color: #000;
+  border-top:1px solid #f1f1f1;
+  line-height: 100rpx;
+  text-align: center;
+  background-color:#fff;
+}
+.footBox .btn2{
+  width: 375rpx;
+  height: 100rpx;
+  float: left;
+   color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  background-color:#000;
+}
+.footBox .notBtn{
+  width: 100%;
+  height: 100rpx;
+  float: left;
+  color: #000;
+  border-top:1px solid #ccc;
+  line-height: 100rpx;
+  text-align: center;
+  background-color:#fff;
+}

@@ -1,0 +1,15 @@
+<!--pages/patternSearch/patternSearch.wxml-->
+<view class="container page">
+  <view class='pics-cus'>
+    <view wx:for="{{patternList}}" wx:key="{{index}}" class='pic-cus'>
+      <view class='pic image-wrap' bindtap='detailHandler' data-id="{{item.id}}">
+        <image class="image" lazy-load="true" mode="widthFix" src="{{item.thumbUrl}}"></image>
+      </view>
+      <view class='name' hidden='{{sharing ? true : false}}' bindtap='addTocartHandler' data-id="{{item.id}}">
+        <view class='cartB image-wrap'>
+          <image src="../../images/app/addCart.png" class='image' mode='aspectFit'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
