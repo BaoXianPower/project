@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>米绘智能花型设计工具</title>
+    <meta charset="UTF-8">
+    <meta name="fragment" content="!">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="author" content="jbx">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="version" content="alidao v1.0 20140306">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+</head>
+<body>
+    <script>
+        var desW = 750, docEl = document.documentElement || document.body;
+        var resize = "orientationchange" in window ? 'orientationchange' : 'resize';
+        var setRem = function () {
+            var screenWidth = docEl.clientWidth || window.screen.width;
+            var fontS = screenWidth < 750 ? 100 * screenWidth / desW : 100;
+            docEl.style.fontSize = fontS + 'px';
+        };
+        setRem();
+        window.addEventListener(resize, setRem, false);
+    </script>
+
+    <script>
+        // 判断是否是微信浏览器
+        window.isWeiXin = /MicroMessenger/.test(window.navigator.userAgent);
+    </script>
+
+    <%= require('html-loader!./view/index.html') %>
+
+</body>
+</html>
